@@ -460,6 +460,14 @@ definitions:
             format: "int64"
             description: "Quantidade de varas no grupo"
             example: 45
+      best_steps:
+        type: "array"
+        items:
+          $ref: "#/definitions/etapa"
+      worst_steps:
+        type: "array"
+        items:
+          $ref: "#/definitions/etapa"
   melhoresVaraNaEtapa:
     type: "array"
     items:
