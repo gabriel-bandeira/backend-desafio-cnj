@@ -21,6 +21,46 @@ def home(request):
     return Response('Backend is running fine', HTTP_200_OK)
 
 
+# Support functions
+def __get_best_steps__(vara_id:int, amount_of_steps:int =10):
+    step_objects = Steps.objects.filter(vara_id=vara_id).order_by('med_time')[:amount_of_steps]
+    res_steps = []
+    for step in step_objects.all():
+        step_dict = StepsSerializer(step).data
+        res_dict = {
+            'step_id': step_dict['step_id'],
+            'med_time': step_dict['med_time'],
+            'frequency': step_dict['frequency']
+        }
+        # Get step info
+        step_config_obj = StepConfiguration.objects.get(step_id=res_dict['step_id'])
+        step_config = StepConfigurationSerializer(step_config_obj).data
+        res_dict['origin'] = step_config['origin']
+        res_dict['destination'] = step_config['destination']
+        res_steps.append(res_dict)
+    return res_steps
+
+
+def __get_worst_steps__(vara_id:int, amount_of_steps:int = 10):
+    step_objects = Steps.objects.filter(vara_id=vara_id).order_by('-med_time')[:amount_of_steps]
+    res_steps = []
+    for step in step_objects.all():
+        step_dict = StepsSerializer(step).data
+        res_dict = {
+            'step_id': step_dict['step_id'],
+            'med_time': step_dict['med_time'],
+            'frequency': step_dict['frequency']
+        }
+        # Get step info
+        step_config_obj = StepConfiguration.objects.get(step_id=res_dict['step_id'])
+        step_config = StepConfigurationSerializer(step_config_obj).data
+        res_dict['origin'] = step_config['origin']
+        res_dict['destination'] = step_config['destination']
+        res_steps.append(res_dict)
+    return res_steps
+
+
+
 # Varas
 @csrf_exempt
 @api_view(["GET"])
@@ -47,6 +87,8 @@ def vara_details(request, vara_id):
         group_res = GroupSerializer(group).data
         vara_res['group'] = group_res
         vara_res.pop('group_id')
+        vara_res['best_steps'] = __get_best_steps__(vara_id, 10)
+        vara_res['worst_steps'] = __get_worst_steps__(vara_id, 10)
         return Response(vara_res, HTTP_200_OK)
     except Vara.DoesNotExist as e:
         return Response(str(e), HTTP_404_NOT_FOUND)
@@ -109,21 +151,7 @@ def best_steps(request):
     try:
         vara_id = request.GET.get('vara_id', None)
         amount_of_steps = int(request.GET.get('amount_of_steps', 10))
-        step_objects = Steps.objects.filter(vara_id=vara_id).order_by('med_time')[:amount_of_steps]
-        res_steps = []
-        for step in step_objects.all():
-            step_dict = StepsSerializer(step).data
-            res_dict = {
-                'step_id': step_dict['step_id'],
-                'med_time': step_dict['med_time'],
-                'frequency': step_dict['frequency']
-            }
-            # Get step info
-            step_config_obj = StepConfiguration.objects.get(step_id=res_dict['step_id'])
-            step_config = StepConfigurationSerializer(step_config_obj).data
-            res_dict['origin'] = step_config['origin']
-            res_dict['destination'] = step_config['destination']
-            res_steps.append(res_dict)
+        res_steps = __get_best_steps__(vara_id, amount_of_steps)
         return Response(res_steps, HTTP_200_OK)
     except Steps.DoesNotExist as e:
         return Response('Error getting steps. ' + str(e), HTTP_404_NOT_FOUND)
@@ -139,21 +167,7 @@ def worst_steps(request):
     try:
         vara_id = request.GET.get('vara_id', None)
         amount_of_steps = int(request.GET.get('amount_of_steps', 10))
-        step_objects = Steps.objects.filter(vara_id=vara_id).order_by('-med_time')[:amount_of_steps]
-        res_steps = []
-        for step in step_objects.all():
-            step_dict = StepsSerializer(step).data
-            res_dict = {
-                'step_id': step_dict['step_id'],
-                'med_time': step_dict['med_time'],
-                'frequency': step_dict['frequency']
-            }
-            # Get step info
-            step_config_obj = StepConfiguration.objects.get(step_id=res_dict['step_id'])
-            step_config = StepConfigurationSerializer(step_config_obj).data
-            res_dict['origin'] = step_config['origin']
-            res_dict['destination'] = step_config['destination']
-            res_steps.append(res_dict)
+        res_steps = __get_worst_steps__(vara_id, amount_of_steps)
         return Response(res_steps, HTTP_200_OK)
     except Steps.DoesNotExist as e:
         return Response('Error getting steps. ' + str(e), HTTP_404_NOT_FOUND)
