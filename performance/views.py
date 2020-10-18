@@ -17,7 +17,7 @@ from rest_framework.permissions import AllowAny
 @api_view(["GET"])
 @permission_classes((AllowAny,))
 def home(request):
-    return Response('home', HTTP_200_OK)
+    return Response('Backend is running fine', HTTP_200_OK)
 
 
 # Varas
