@@ -21,4 +21,9 @@ urlpatterns = [
     # Comentarios
     path('api/v1/comments/', views.comments_list),
     path('api/v1/comments/<int:comment_id>/', views.comment),
+
+    # Grafos
+    path('api/v1/varas/<int:vara_id>/compareGraphWith/'+\
+         '<int:other_vara_id>/<int:is_time>/', 
+        views.graphs),
 ]

@@ -3,6 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import Group, Vara, StepConfiguration, Comments, Steps
 from .serializers import GroupSerializer, VaraSerializer, VaraDetailsSerializer, VaraListSerializer,\
     StepConfigurationSerializer, CommentsSerializer, StepsSerializer
+from .utils import create_graph_dict
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, \
                                       permission_classes
@@ -220,3 +221,19 @@ def comment(request, comment_id):
         return Response(str(e), HTTP_404_NOT_FOUND)
     except Exception as e:
         return Response(str(e), HTTP_400_BAD_REQUEST)
+
+
+@csrf_exempt
+@api_view(["GET"])
+@permission_classes((AllowAny,))
+def graphs(request, vara_id, other_vara_id, is_time):
+    try:
+        vara_graph = create_graph_dict(vara_id=vara_id,
+                                       is_time=is_time)
+        other_vara_graph = create_graph_dict(vara_id=other_vara_id,
+                                             is_time=is_time)
+        return Response([vara_graph, other_vara_graph], HTTP_200_OK)
+    except Vara.DoesNotExist as e:
+       return Response(str(e), HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response(str(e), HTTP_400_BAD_REQUEST) 

@@ -54,9 +54,9 @@ class Comments(models.Model):
 class Steps(models.Model):
   step_id = models.ForeignKey(StepConfiguration, on_delete=models.CASCADE)
   vara_id = models.ForeignKey(Vara, on_delete=models.CASCADE)
-  min_time = models.IntegerField(default=None)
+  min_time = models.IntegerField(default=None, null=True)
   med_time = models.IntegerField(default=None)
-  max_time = models.IntegerField(default=None)
+  max_time = models.IntegerField(default=None, null=True)
   frequency = models.IntegerField(default=None)
-  comment_id = models.ForeignKey(Comments, on_delete=models.CASCADE)
+  comment_id = models.ForeignKey(Comments, on_delete=models.CASCADE, null=True)
 
