@@ -7,10 +7,11 @@ class Group(models.Model):
     competences = models.IntegerField(default=None)
     justice = models.TextField(max_length=255, blank=False, default=None)
     grade = models.TextField(max_length=255, blank=False, default=None)
-    court = models.TextField(max_length=255, blank=False, default=None)
-    court_class = models.TextField(max_length=255, blank=False, default=None)
+    court = models.TextField(max_length=255, null=True, default=None)
+    court_class = models.TextField(max_length=255, null=True, default=None)
     subject = models.TextField(max_length=255, blank=False, default=None)
-    judging_body = models.TextField(max_length=255, blank=False, default=None)
+    judging_body = models.TextField(max_length=255, null=True, default=None)
+    method = models.TextField(max_length=255, null=True, default=None)
 
     amount_of_varas = models.IntegerField(default=None)
 
