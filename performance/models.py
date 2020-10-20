@@ -20,20 +20,24 @@ class Vara(models.Model):
     vara_id = models.BigIntegerField(primary_key=True)
     name = models.TextField(max_length=255, blank=False, default=None)
 
-    ranking = models.IntegerField(default=None)
+    ranking = models.IntegerField(default=None, null=True)
     finished_processes = models.IntegerField(default=None)
     movements = models.IntegerField(default=None)
 
     group_id = models.ForeignKey(Group, on_delete=models.CASCADE)
 
-    time_macrostep_1 = models.IntegerField(default=None)
-    time_macrostep_2 = models.IntegerField(default=None)
-    time_macrostep_3 = models.IntegerField(default=None)
-    time_macrostep_4 = models.IntegerField(default=None)
+    time_distribuicao = models.IntegerField(default=None, null=True)
+    time_conclusao = models.IntegerField(default=None, null=True)
+    time_despacho = models.IntegerField(default=None, null=True)
+    time_decisao = models.IntegerField(default=None, null=True)
+    time_julgamento = models.IntegerField(default=None, null=True)
+    time_transito_em_julgado = models.IntegerField(default=None, null=True)
+    time_baixa_ou_arquivamento = models.IntegerField(default=None, null=True)
+
     days_finish_process = models.IntegerField(default=None)
 
-    latitude = models.FloatField(default=None)
-    longitude = models.FloatField(default=None)
+    latitude = models.FloatField(default=None, null=True)
+    longitude = models.FloatField(default=None, null=True)
 
 
 class VaraList(models.Model):
