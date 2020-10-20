@@ -102,8 +102,24 @@ def best_varas_on_step(request):
     try:
         step_id = request.GET.get('step_id', None)
         vara_id = request.GET.get('vara_id', None)
+
+        # print('step_id: ', str(step_id))
+        # print('vara_id: ', str(vara_id))
+
+
         amount_of_varas = int(request.GET.get('amount_of_varas', 10))
-        all_step_objects = Steps.objects.filter(step_id=step_id).order_by('med_time')
+
+        my_vara = Vara.objects.get(vara_id=vara_id)
+        my_vara_group = my_vara.group_id
+        varas_in_group = Vara.objects.filter(group_id=my_vara_group)
+
+        # print('varas_list: ', str(varas_list))
+
+        all_step_objects = Steps.objects.\
+            filter(step_id=step_id, vara_id__in=varas_in_group).\
+                order_by('med_time')
+
+        # print('all_step_objects: ', str(all_step_objects))
 
         first_objs = all_step_objects[:max(amount_of_varas - 5, 1)]
         focused_vara_index = list(all_step_objects.all()).index(Steps.objects.get(step_id=step_id,vara_id=vara_id))
@@ -128,9 +144,10 @@ def best_varas_on_step(request):
             vara = VaraSerializer(vara_obj).data
             res_dict['vara_name'] = vara['name']
             # Get comment info
-            comment_obj = Comments.objects.get(comment_id=step_dict['comment_id'])
-            comment = CommentsSerializer(comment_obj).data
-            res_dict['comment'] = comment['comment']
+            # comment_obj = Comments.objects.get(comment_id=step_dict['comment_id'])
+            # comment = CommentsSerializer(comment_obj).data
+            # res_dict['comment'] = comment['comment']
+            res_dict['comment'] = "Meu comentário fixo"
             res_steps.append(res_dict)
         return Response(res_steps, HTTP_200_OK)
     except Steps.DoesNotExist as e:
@@ -185,8 +202,12 @@ def best_varas(request):
     try:
         vara_id = request.GET.get('vara_id', None)
         amount_of_varas = int(request.GET.get('amount_of_varas', 10))
-        all_vara_obj_list = Vara.objects.order_by('days_finish_process')
 
+        my_vara = Vara.objects.get(vara_id=vara_id)
+        my_vara_group = my_vara.group_id
+
+        all_vara_obj_list = Vara.objects.filter(group_id=my_vara_group).\
+            order_by('days_finish_process')
         first_objs = all_vara_obj_list[:max(amount_of_varas - 5, 1)]
         focused_vara_index = list(all_vara_obj_list.all()).index(Vara.objects.get(vara_id=vara_id))
         min_index_to_get = max(0, focused_vara_index-2)
