@@ -36,10 +36,13 @@ class VaraSerializer(serializers.ModelSerializer):
         model = Vara
         fields = ['vara_id',
                   'name',
-                  'time_macrostep_1',
-                  'time_macrostep_2',
-                  'time_macrostep_3',
-                  'time_macrostep_4',
+                  'time_distribuicao',
+                  'time_conclusao',
+                  'time_despacho',
+                  'time_decisao',
+                  'time_julgamento',
+                  'time_transito_em_julgado',
+                  'time_baixa_ou_arquivamento',
                   'days_finish_process',
                   'latitude',
                   'longitude']
