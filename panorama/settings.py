@@ -87,7 +87,7 @@ DATABASES = {
         'PASSWORD': 'panorama',
         'HOST': 'localhost',
         'PORT': '5432',
-        'CONN_MAX_AGE': 500                                                               }
+        'CONN_MAX_AGE': None                                                               }
  }
 
 # Password validation
