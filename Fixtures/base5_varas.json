@@ -1,1 +1,1469 @@
-[{"model": "performance.Vara", "pk": 20, "fields": {"vara_id": 20, "name": "VARA C\u00cdVEL - TJAC", "latitude": -10.1497, "longitude": -67.7362, "finished_processes": 46, "movements": 90, "group_id": 256, "days_finish_process": 2160, "time_distribuicao": 40, "time_conclusao": 28, "time_decisao": 30, "time_julgamento": 18, "ranking": 5}}, {"model": "performance.Vara", "pk": 21, "fields": {"vara_id": 21, "name": "CAPELA - TJSE", "latitude": -10.5069, "longitude": -37.0628, "finished_processes": 52, "movements": 63, "group_id": 256, "days_finish_process": 6031, "time_distribuicao": 42, "time_conclusao": 42, "time_decisao": 35, "time_julgamento": 49, "ranking": 14}}, {"model": "performance.Vara", "pk": 22, "fields": {"vara_id": 22, "name": "JUIZO DA 1\u00aa VARA DOS FEITOS DAS FAZENDAS E REG. P\u00daBLICOS E PREC. C\u00cdVEIS DE PARA\u00cdSO DO TOCANTINS - TJTO", "latitude": null, "longitude": null, "finished_processes": 59, "movements": 27, "group_id": 256, "days_finish_process": 1736, "time_distribuicao": 24, "time_despacho": 4, "time_decisao": 6, "time_conclusao": 12, "time_julgamento": 35, "ranking": 3}}, {"model": "performance.Vara", "pk": 23, "fields": {"vara_id": 23, "name": "VARA C\u00cdVEL - TJRR", "latitude": 1.01019, "longitude": -60.0419, "finished_processes": 56, "movements": 64, "group_id": 256, "days_finish_process": 2132, "time_distribuicao": 28, "time_conclusao": 39, "time_despacho": 35, "time_decisao": 14, "time_julgamento": 16, "ranking": 4}}, {"model": "performance.Vara", "pk": 24, "fields": {"vara_id": 24, "name": "JU\u00cdZO DA 1\u00aa VARA C\u00cdVEL DE MIRACEMA DO TOCANTINS - TJTO", "latitude": null, "longitude": null, "finished_processes": 79, "movements": 30, "group_id": 256, "days_finish_process": 901, "time_distribuicao": 76, "time_conclusao": 61, "time_despacho": 42, "time_julgamento": 53, "ranking": 1}}, {"model": "performance.Vara", "pk": 25, "fields": {"vara_id": 25, "name": "1\u00aa VARA GEN\u00c9RICA - TJRO", "latitude": -11.5266, "longitude": -61.0252, "finished_processes": 86, "movements": 9, "group_id": 256, "days_finish_process": 3146, "time_distribuicao": 86, "time_conclusao": 70, "time_despacho": 34, "time_decisao": 32, "time_julgamento": 82, "ranking": 12}}, {"model": "performance.Vara", "pk": 26, "fields": {"vara_id": 26, "name": "2\u00aa VARA GEN\u00c9RICA - TJRO", "latitude": -11.5266, "longitude": -61.0252, "finished_processes": 92, "movements": 8, "group_id": 256, "days_finish_process": 2587, "time_distribuicao": 92, "time_conclusao": 74, "time_despacho": 31, "time_decisao": 31, "time_julgamento": 92, "ranking": 11}}, {"model": "performance.Vara", "pk": 27, "fields": {"vara_id": 27, "name": "VARA UNICA - TJRO", "latitude": -11.169, "longitude": -61.8986, "finished_processes": 94, "movements": 13, "group_id": 256, "days_finish_process": 2513, "time_distribuicao": 86, "time_conclusao": 86, "time_despacho": 69, "time_decisao": 39, "time_julgamento": 88, "ranking": 9}}, {"model": "performance.Vara", "pk": 28, "fields": {"vara_id": 28, "name": "1\u00aa VARA C\u00cdVEL - TJRO", "latitude": -9.905710000000001, "longitude": -63.0325, "finished_processes": 106, "movements": 6, "group_id": 256, "days_finish_process": 2365, "time_distribuicao": 105, "time_conclusao": 75, "time_julgamento": 104, "ranking": 8}}, {"model": "performance.Vara", "pk": 29, "fields": {"vara_id": 29, "name": "4\u00aa VARA CIVEL - TJRO", "latitude": -9.905710000000001, "longitude": -63.0325, "finished_processes": 162, "movements": 12, "group_id": 256, "days_finish_process": 2308, "time_distribuicao": 162, "time_conclusao": 63, "time_despacho": 31, "time_decisao": 55, "time_julgamento": 118, "ranking": 7}}, {"model": "performance.Vara", "pk": 30, "fields": {"vara_id": 30, "name": "3\u00aa VARA CIVEL - TJRO", "latitude": -9.905710000000001, "longitude": -63.0325, "finished_processes": 163, "movements": 12, "group_id": 256, "days_finish_process": 2240, "time_distribuicao": 132, "time_conclusao": 37, "time_despacho": 24, "time_decisao": 54, "time_julgamento": 103, "ranking": 6}}, {"model": "performance.Vara", "pk": 31, "fields": {"vara_id": 31, "name": "2\u00aa VARA CIVEL - TJRO", "latitude": -9.905710000000001, "longitude": -63.0325, "finished_processes": 211, "movements": 9, "group_id": 256, "days_finish_process": 2549, "time_distribuicao": 191, "time_conclusao": 84, "time_despacho": 24, "time_decisao": 46, "time_julgamento": 161, "ranking": 10}}, {"model": "performance.Vara", "pk": 32, "fields": {"vara_id": 32, "name": "JU\u00cdZO DA 2\u00aa VARA C\u00cdVEL DE PORTO NACIONAL - TJTO", "latitude": null, "longitude": null, "finished_processes": 296, "movements": 33, "group_id": 256, "days_finish_process": 1485, "time_distribuicao": 267, "time_despacho": 251, "time_conclusao": 185, "time_julgamento": 274, "ranking": 2}}, {"model": "performance.Vara", "pk": 33, "fields": {"vara_id": 33, "name": "1\u00aa VARA CIVEL - TJRO", "latitude": -11.672, "longitude": -61.198, "finished_processes": 328, "movements": 12, "group_id": 256, "days_finish_process": 3479, "time_distribuicao": 324, "time_conclusao": 252, "time_despacho": 112, "time_decisao": 110, "time_julgamento": 274, "ranking": 13}}, {"model": "performance.Vara", "pk": 34, "fields": {"vara_id": 34, "name": "1\u00aa V DOS FEITOS DE REL DE CONS CIV E COMERCIAIS - TJBA", "latitude": -12.427999999999999, "longitude": -39.2505, "finished_processes": 42, "movements": 40, "group_id": 111, "days_finish_process": 3497, "time_distribuicao": 42, "time_conclusao": 25, "time_despacho": 25, "time_julgamento": 23, "ranking": 36}}, {"model": "performance.Vara", "pk": 35, "fields": {"vara_id": 35, "name": "VIT\u00d3RIA - 2\u00aa VARA EXECU\u00c7\u00d5ES FISCAIS - TJES", "latitude": null, "longitude": null, "finished_processes": 59, "movements": 89, "group_id": 111, "days_finish_process": 2939, "time_distribuicao": 59, "time_conclusao": 48, "time_decisao": 33, "time_julgamento": 33, "ranking": 27}}, {"model": "performance.Vara", "pk": 36, "fields": {"vara_id": 36, "name": "3\u00aa VARA DOS FEITOS DA FAZENDA P\u00daBLICA DE TERESINA - TJPI", "latitude": -5.09194, "longitude": -42.8034, "finished_processes": 62, "movements": 40, "group_id": 111, "days_finish_process": 7826, "time_distribuicao": 41, "time_conclusao": 33, "time_despacho": 30, "time_julgamento": 48, "ranking": 48}}, {"model": "performance.Vara", "pk": 37, "fields": {"vara_id": 37, "name": "1\u00aa VARA DE EXECUTIVOS FISCAIS - TJPB", "latitude": -7.1150899999999995, "longitude": -34.8641, "finished_processes": 69, "movements": 13, "group_id": 111, "days_finish_process": 3096, "time_distribuicao": 61, "time_conclusao": 57, "time_julgamento": 30, "time_despacho": 21, "ranking": 30}}, {"model": "performance.Vara", "pk": 38, "fields": {"vara_id": 38, "name": "2\u00aa VARA DE EXECU\u00c7\u00c3O FISCAL E TRIBUT\u00c1RIA - TJRN", "latitude": null, "longitude": null, "finished_processes": 77, "movements": 26, "group_id": 111, "days_finish_process": 4263, "time_distribuicao": 44, "time_conclusao": 35, "time_despacho": 16, "time_decisao": 24, "time_julgamento": 39, "ranking": 39}}, {"model": "performance.Vara", "pk": 39, "fields": {"vara_id": 39, "name": "VARA DE EXECU\u00c7\u00c3O FISCAL - TJAC", "latitude": -9.97499, "longitude": -67.8243, "finished_processes": 80, "movements": 48, "group_id": 111, "days_finish_process": 1508, "time_distribuicao": 67, "time_conclusao": 67, "time_decisao": 67, "time_julgamento": 75, "ranking": 14}}, {"model": "performance.Vara", "pk": 40, "fields": {"vara_id": 40, "name": "VARA DA FAZENDA P\u00daBLICA DA COMARCA DE PAULISTA - TJPE", "latitude": -7.934010000000001, "longitude": -34.8684, "finished_processes": 91, "movements": 34, "group_id": 111, "days_finish_process": 3481, "time_distribuicao": 91, "time_conclusao": 91, "time_despacho": 75, "time_decisao": 60, "ranking": 35}}, {"model": "performance.Vara", "pk": 41, "fields": {"vara_id": 41, "name": "1\u00aa V DA FAZENDA P\u00daBLICA DA COMARCA DE SIM\u00d5ES FILHO - TJBA", "latitude": -12.7866, "longitude": -38.4029, "finished_processes": 120, "movements": 7, "group_id": 111, "days_finish_process": 92, "time_distribuicao": 120, "time_despacho": 120, "time_julgamento": 120, "ranking": 2}}, {"model": "performance.Vara", "pk": 42, "fields": {"vara_id": 42, "name": "1\u00aa VARA DOS EXECUTIVOS FISCAIS ESTADUAIS DA CAPITAL - TJPE", "latitude": -8.046660000000001, "longitude": -34.8771, "finished_processes": 133, "movements": 34, "group_id": 111, "days_finish_process": 9632, "time_distribuicao": 114, "time_conclusao": 95, "time_despacho": 69, "time_julgamento": 74, "ranking": 50}}, {"model": "performance.Vara", "pk": 43, "fields": {"vara_id": 43, "name": "QUARTA VARA - COMARCA DE PRIMAVERA DO LESTE - SDCR - TJMT", "latitude": -15.544, "longitude": -54.2811, "finished_processes": 141, "movements": 95, "group_id": 111, "days_finish_process": 2379, "time_distribuicao": 136, "time_conclusao": 90, "time_despacho": 49, "time_decisao": 16, "time_julgamento": 37, "ranking": 22}}, {"model": "performance.Vara", "pk": 44, "fields": {"vara_id": 44, "name": "PONTA GROSSA - 1\u00aa VARA DA FAZENDA P\u00daBLICA - TJPR", "latitude": -25.0916, "longitude": -50.1668, "finished_processes": 145, "movements": 54, "group_id": 111, "days_finish_process": 1523, "time_distribuicao": 100, "time_conclusao": 58, "time_decisao": 52, "time_julgamento": 127, "ranking": 15}}, {"model": "performance.Vara", "pk": 45, "fields": {"vara_id": 45, "name": "VARA ESPECIALIZADA DA FAZENDA P\u00daBLICA  - SDCR - TJMT", "latitude": -11.8604, "longitude": -55.5091, "finished_processes": 157, "movements": 20, "group_id": 111, "days_finish_process": 112, "time_distribuicao": 117, "time_conclusao": 61, "time_despacho": 111, "ranking": 3}}, {"model": "performance.Vara", "pk": 46, "fields": {"vara_id": 46, "name": "VIT\u00d3RIA - 1\u00aa VARA EXECU\u00c7\u00d5ES FISCAIS - TJES", "latitude": null, "longitude": null, "finished_processes": 149, "movements": 107, "group_id": 111, "days_finish_process": 6155, "time_distribuicao": 140, "time_conclusao": 108, "time_decisao": 79, "time_julgamento": 95, "ranking": 43}}, {"model": "performance.Vara", "pk": 47, "fields": {"vara_id": 47, "name": "1A. VARA DE EXECUTIVO FISCAL JOAO PESSOA - TJPB", "latitude": null, "longitude": null, "finished_processes": 156, "movements": 13, "group_id": 111, "days_finish_process": 1209, "time_distribuicao": 108, "time_conclusao": 109, "time_despacho": 98, "time_julgamento": 101, "ranking": 12}}, {"model": "performance.Vara", "pk": 48, "fields": {"vara_id": 48, "name": "LONDRINA - 2\u00aa VARA DE EXECU\u00c7\u00d5ES FISCAIS - TJPR", "latitude": -23.304000000000002, "longitude": -51.1691, "finished_processes": 162, "movements": 47, "group_id": 111, "days_finish_process": 906, "time_distribuicao": 84, "time_decisao": 84, "time_conclusao": 96, "time_julgamento": 149, "ranking": 10}}, {"model": "performance.Vara", "pk": 49, "fields": {"vara_id": 49, "name": "JUIZO DA 2\u00aa VARA DA FAZENDA E REGISTROS P\u00daBLICOS DE ARAGUA\u00cdNA - TJTO", "latitude": null, "longitude": null, "finished_processes": 182, "movements": 20, "group_id": 111, "days_finish_process": 699, "time_distribuicao": 172, "time_conclusao": 123, "time_julgamento": 168, "ranking": 9}}, {"model": "performance.Vara", "pk": 50, "fields": {"vara_id": 50, "name": "2A. VARA DE EXECUTIVO FISCAL JOAO PESSOA - TJPB", "latitude": null, "longitude": null, "finished_processes": 181, "movements": 23, "group_id": 111, "days_finish_process": 1954, "time_distribuicao": 121, "time_conclusao": 114, "time_despacho": 96, "time_julgamento": 133, "ranking": 18}}, {"model": "performance.Vara", "pk": 51, "fields": {"vara_id": 51, "name": "LONDRINA - 1\u00aa VARA DE EXECU\u00c7\u00d5ES FISCAIS - TJPR", "latitude": -23.304000000000002, "longitude": -51.1691, "finished_processes": 189, "movements": 26, "group_id": 111, "days_finish_process": 503, "time_distribuicao": 112, "time_conclusao": 79, "time_julgamento": 101, "ranking": 8}}, {"model": "performance.Vara", "pk": 52, "fields": {"vara_id": 52, "name": "VARA DA FAZENDA P\u00daBLICA DA COMARCA DE SANTA CRUZ DO CAPIBARIBE - TJPE", "latitude": -7.94802, "longitude": -36.2061, "finished_processes": 190, "movements": 24, "group_id": 111, "days_finish_process": 2153, "time_distribuicao": 190, "time_conclusao": 190, "time_despacho": 182, "time_julgamento": 188, "ranking": 20}}, {"model": "performance.Vara", "pk": 53, "fields": {"vara_id": 53, "name": "PONTA GROSSA - 2\u00aa VARA DA FAZENDA P\u00daBLICA - TJPR", "latitude": -25.0916, "longitude": -50.1668, "finished_processes": 203, "movements": 50, "group_id": 111, "days_finish_process": 1275, "time_distribuicao": 159, "time_conclusao": 74, "time_decisao": 65, "time_julgamento": 69, "ranking": 13}}, {"model": "performance.Vara", "pk": 54, "fields": {"vara_id": 54, "name": "CURITIBA - 1\u00aa VARA DE EXECU\u00c7\u00d5ES FISCAIS ESTADUAIS - TJPR", "latitude": -25.4195, "longitude": -49.2646, "finished_processes": 214, "movements": 22, "group_id": 111, "days_finish_process": 422, "time_distribuicao": 46, "time_decisao": 52, "time_conclusao": 73, "time_despacho": 1, "time_julgamento": 24, "ranking": 6}}, {"model": "performance.Vara", "pk": 55, "fields": {"vara_id": 55, "name": "MATEL\u00c2NDIA - VARA C\u00cdVEL, DA FAZENDA P\u00daBLICA, ACIDENTES DO TRABALHO, REGISTROS P\u00daBLICOS E CORREGEDORIA DO FORO EXTRAJUDICIAL, JUIZADO ESPECIAL C\u00cdVEL E JUIZADO ESPECIAL DA FAZENDA P\u00daBLICA - TJPR", "latitude": -25.2496, "longitude": -53.9935, "finished_processes": 258, "movements": 34, "group_id": 111, "days_finish_process": 148, "time_distribuicao": 254, "time_conclusao": 107, "time_despacho": 97, "time_julgamento": 196, "ranking": 4}}, {"model": "performance.Vara", "pk": 56, "fields": {"vara_id": 56, "name": "1\u00aa VARA DA FAZENDA P\u00daBLICA - TJAC", "latitude": -9.97499, "longitude": -67.8243, "finished_processes": 278, "movements": 28, "group_id": 111, "days_finish_process": 498, "time_distribuicao": 188, "time_conclusao": 130, "time_decisao": 134, "time_julgamento": 122, "ranking": 7}}, {"model": "performance.Vara", "pk": 57, "fields": {"vara_id": 57, "name": "PORTO VELHO - 2\u00aa VARA DE EXECU\u00c7\u00d5ES FISCAIS - TJRO", "latitude": -8.760769999999999, "longitude": -63.8999, "finished_processes": 296, "movements": 13, "group_id": 111, "days_finish_process": 2899, "time_distribuicao": 294, "time_conclusao": 160, "time_julgamento": 208, "ranking": 26}}, {"model": "performance.Vara", "pk": 58, "fields": {"vara_id": 58, "name": "CURITIBA - 2\u00aa VARA DE EXECU\u00c7\u00d5ES FISCAIS ESTADUAIS - TJPR", "latitude": -25.4195, "longitude": -49.2646, "finished_processes": 301, "movements": 16, "group_id": 111, "days_finish_process": 90, "time_distribuicao": 284, "time_conclusao": 256, "time_julgamento": 256, "ranking": 1}}, {"model": "performance.Vara", "pk": 59, "fields": {"vara_id": 59, "name": "CACHOEIRO DE ITAPEMIRIM - 2\u00aa VARA FAZENDA P\u00daBLICA ESTADUAL, MUNICIPAL, REG P\u00daBLICOS, MEIO AMBIENTE E SA\u00daDE - TJES", "latitude": -20.8462, "longitude": -41.1198, "finished_processes": 320, "movements": 22, "group_id": 111, "days_finish_process": 1688, "time_distribuicao": 190, "time_conclusao": 148, "time_julgamento": 184, "ranking": 17}}, {"model": "performance.Vara", "pk": 60, "fields": {"vara_id": 60, "name": "VARA DA FAZENDA P\u00daBLICA - TJRN", "latitude": null, "longitude": null, "finished_processes": 330, "movements": 31, "group_id": 111, "days_finish_process": 2798, "time_distribuicao": 187, "time_conclusao": 179, "time_despacho": 143, "time_decisao": 224, "time_julgamento": 233, "ranking": 25}}, {"model": "performance.Vara", "pk": 61, "fields": {"vara_id": 61, "name": "VARA UNICA DE NHANDEARA - TJSP", "latitude": -20.6945, "longitude": -50.0436, "finished_processes": 364, "movements": 12, "group_id": 111, "days_finish_process": 22617, "time_distribuicao": 355, "time_despacho": 355, "ranking": 51}}, {"model": "performance.Vara", "pk": 62, "fields": {"vara_id": 62, "name": "1\u00aa VARA DE EXECU\u00c7\u00c3O FISCAL E TRIBUT\u00c1RIA - TJRN", "latitude": null, "longitude": null, "finished_processes": 348, "movements": 39, "group_id": 111, "days_finish_process": 4689, "time_distribuicao": 244, "time_conclusao": 239, "time_despacho": 182, "time_decisao": 218, "time_julgamento": 121, "ranking": 41}}, {"model": "performance.Vara", "pk": 63, "fields": {"vara_id": 63, "name": "5? VARA DA FAZENDA P?BLICA DO DF - TJDFT", "latitude": -15.7795, "longitude": -47.9297, "finished_processes": 351, "movements": 35, "group_id": 111, "days_finish_process": 6812, "time_distribuicao": 275, "time_conclusao": 275, "time_decisao": 271, "ranking": 44}}, {"model": "performance.Vara", "pk": 64, "fields": {"vara_id": 64, "name": "8\u00aa VARA DA FAZENDA P\u00daBLICA DE S\u00c3O LU\u00cdS - TJMA", "latitude": -2.53874, "longitude": -44.2825, "finished_processes": 388, "movements": 25, "group_id": 111, "days_finish_process": 3021, "time_distribuicao": 104, "time_conclusao": 188, "time_despacho": 219, "time_julgamento": 371, "ranking": 29}}, {"model": "performance.Vara", "pk": 65, "fields": {"vara_id": 65, "name": "8? VARA DA FAZENDA P?BLICA DO DF - TJDFT", "latitude": -15.7795, "longitude": -47.9297, "finished_processes": 394, "movements": 38, "group_id": 111, "days_finish_process": 6819, "time_distribuicao": 198, "time_conclusao": 185, "time_decisao": 108, "time_julgamento": 200, "ranking": 46}}, {"model": "performance.Vara", "pk": 66, "fields": {"vara_id": 66, "name": "COLOMBO - VARA DA FAZENDA P\u00daBLICA - TJPR", "latitude": -25.2925, "longitude": -49.2262, "finished_processes": 401, "movements": 23, "group_id": 111, "days_finish_process": 1661, "time_distribuicao": 326, "time_conclusao": 250, "time_julgamento": 311, "ranking": 16}}, {"model": "performance.Vara", "pk": 67, "fields": {"vara_id": 67, "name": "VIT\u00d3RIA - 1\u00aa VARA DE FAZENDA P\u00daBLICA PRIVATIVA DE EXECU\u00c7\u00d5ES FISCAIS MUNICIPAIS - TJES", "latitude": null, "longitude": null, "finished_processes": 403, "movements": 79, "group_id": 111, "days_finish_process": 2954, "time_distribuicao": 378, "time_conclusao": 281, "time_decisao": 219, "time_julgamento": 309, "ranking": 28}}, {"model": "performance.Vara", "pk": 68, "fields": {"vara_id": 68, "name": "1\u00aa VARA DA FAZENDA P\u00daBLICA - TJBA", "latitude": null, "longitude": null, "finished_processes": 444, "movements": 10, "group_id": 111, "days_finish_process": 3394, "time_distribuicao": 129, "time_conclusao": 87, "time_despacho": 198, "time_julgamento": 336, "ranking": 34}}, {"model": "performance.Vara", "pk": 69, "fields": {"vara_id": 69, "name": "6? VARA DA FAZENDA P?BLICA DO DF - TJDFT", "latitude": -15.7795, "longitude": -47.9297, "finished_processes": 453, "movements": 39, "group_id": 111, "days_finish_process": 6816, "time_distribuicao": 396, "time_conclusao": 400, "time_decisao": 110, "time_julgamento": 110, "time_despacho": 284, "ranking": 45}}, {"model": "performance.Vara", "pk": 70, "fields": {"vara_id": 70, "name": "VARA ESPECIALIZADA DE EXECU\u00c7\u00c3O FISCAL - SDCR - TJMT", "latitude": -15.600999999999999, "longitude": -56.0974, "finished_processes": 497, "movements": 59, "group_id": 111, "days_finish_process": 3498, "time_distribuicao": 410, "time_conclusao": 326, "time_decisao": 268, "time_despacho": 250, "time_julgamento": 285, "ranking": 37}}, {"model": "performance.Vara", "pk": 71, "fields": {"vara_id": 71, "name": "ITAPEMIRIM - 1\u00aa VARA C\u00cdVEL - TJES", "latitude": -21.0095, "longitude": -40.8307, "finished_processes": 521, "movements": 33, "group_id": 111, "days_finish_process": 2505, "time_distribuicao": 521, "time_conclusao": 214, "time_despacho": 113, "time_julgamento": 209, "ranking": 24}}, {"model": "performance.Vara", "pk": 72, "fields": {"vara_id": 72, "name": "CURITIBA - 1\u00aa VARA DE EXECU\u00c7\u00d5ES FISCAIS MUNICIPAIS - TJPR", "latitude": -25.4195, "longitude": -49.2646, "finished_processes": 528, "movements": 21, "group_id": 111, "days_finish_process": 960, "time_distribuicao": 344, "ranking": 11}}, {"model": "performance.Vara", "pk": 73, "fields": {"vara_id": 73, "name": "1\u00aa VARA DE EXECU\u00c7\u00c3O FISCAL DE BEL\u00c9M - TJPA", "latitude": -1.4554, "longitude": -48.4898, "finished_processes": 554, "movements": 21, "group_id": 111, "days_finish_process": 2450, "time_distribuicao": 554, "time_conclusao": 190, "time_despacho": 114, "time_decisao": 273, "time_julgamento": 257, "ranking": 23}}, {"model": "performance.Vara", "pk": 74, "fields": {"vara_id": 74, "name": "VARA DOS EXECUTIVOS FISCAIS DA COMARCA DE JABOAT\u00c3O DOS GUARARAPES - TJPE", "latitude": -8.11298, "longitude": -35.015, "finished_processes": 613, "movements": 24, "group_id": 111, "days_finish_process": 3528, "time_distribuicao": 592, "time_conclusao": 498, "time_despacho": 157, "time_decisao": 54, "time_julgamento": 346, "ranking": 38}}, {"model": "performance.Vara", "pk": 75, "fields": {"vara_id": 75, "name": "2\u00aa VARA DE EXECU\u00c7\u00d5ES FISCAIS - TJRO", "latitude": -8.760769999999999, "longitude": -63.8999, "finished_processes": 660, "movements": 13, "group_id": 111, "days_finish_process": 5269, "time_distribuicao": 625, "time_conclusao": 406, "time_julgamento": 517, "ranking": 42}}, {"model": "performance.Vara", "pk": 76, "fields": {"vara_id": 76, "name": "PARANAGU\u00c1 - VARA DA FAZENDA P\u00daBLICA - TJPR", "latitude": -25.5161, "longitude": -48.5225, "finished_processes": 675, "movements": 17, "group_id": 111, "days_finish_process": 368, "time_distribuicao": 265, "time_conclusao": 272, "time_julgamento": 255, "ranking": 5}}, {"model": "performance.Vara", "pk": 77, "fields": {"vara_id": 77, "name": "6\u00aa VARA C\u00cdVEL E EMPRESARIAL DE SANTAR\u00c9M - TJPA", "latitude": -2.4384900000000003, "longitude": -54.6996, "finished_processes": 691, "movements": 20, "group_id": 111, "days_finish_process": 2110, "time_distribuicao": 686, "time_conclusao": 663, "time_despacho": 492, "time_decisao": 493, "time_julgamento": 382, "ranking": 19}}, {"model": "performance.Vara", "pk": 78, "fields": {"vara_id": 78, "name": "CACHOEIRO DE ITAPEMIRIM - 1\u00aa VARA FAZENDA P\u00daBLICA ESTADUAL, MUNICIPAL, REG P\u00daBLICOS, MEIO AMBIENTE E SA\u00daDE - TJES", "latitude": -20.8462, "longitude": -41.1198, "finished_processes": 719, "movements": 51, "group_id": 111, "days_finish_process": 3204, "time_distribuicao": 697, "time_conclusao": 446, "time_despacho": 393, "time_julgamento": 665, "ranking": 31}}, {"model": "performance.Vara", "pk": 79, "fields": {"vara_id": 79, "name": "22 \u00aa VARA C\u00cdVEL DE ARACAJU - TJSE", "latitude": -10.9091, "longitude": -37.0677, "finished_processes": 926, "movements": 93, "group_id": 111, "days_finish_process": 3349, "time_distribuicao": 489, "time_conclusao": 474, "time_decisao": 336, "time_despacho": 497, "time_julgamento": 677, "ranking": 33}}, {"model": "performance.Vara", "pk": 80, "fields": {"vara_id": 80, "name": "2\u00aa VARA DOS EXECUTIVOS FISCAIS ESTADUAIS DA CAPITAL - TJPE", "latitude": -8.046660000000001, "longitude": -34.8771, "finished_processes": 1422, "movements": 30, "group_id": 111, "days_finish_process": 9149, "time_distribuicao": 1301, "time_conclusao": 1338, "time_despacho": 1093, "time_julgamento": 1185, "ranking": 49}}, {"model": "performance.Vara", "pk": 81, "fields": {"vara_id": 81, "name": "3\u00aa VARA DE FEITOS DA FAZENDA P\u00daBLICA - TJPI", "latitude": -5.09194, "longitude": -42.8034, "finished_processes": 1861, "movements": 28, "group_id": 111, "days_finish_process": 6951, "time_distribuicao": 852, "time_despacho": 843, "time_conclusao": 1046, "time_julgamento": 1618, "ranking": 47}}, {"model": "performance.Vara", "pk": 82, "fields": {"vara_id": 82, "name": "20 \u00aa VARA C\u00cdVEL DE ARACAJU - TJSE", "latitude": -10.9091, "longitude": -37.0677, "finished_processes": 1831, "movements": 72, "group_id": 111, "days_finish_process": 3309, "time_distribuicao": 1524, "time_conclusao": 1461, "time_decisao": 531, "time_despacho": 465, "time_julgamento": 1043, "ranking": 32}}, {"model": "performance.Vara", "pk": 83, "fields": {"vara_id": 83, "name": "JUIZO DA VARA DE EXECU\u00c7\u00d5ES FISCAIS E SA\u00daDE DE PALMAS - TJTO", "latitude": null, "longitude": null, "finished_processes": 2239, "movements": 36, "group_id": 111, "days_finish_process": 2211, "time_distribuicao": 1653, "time_conclusao": 1432, "time_despacho": 1183, "time_julgamento": 1830, "ranking": 21}}, {"model": "performance.Vara", "pk": 84, "fields": {"vara_id": 84, "name": "VARA DE EXECU??O FISCAL DO DF - TJDFT", "latitude": -15.7795, "longitude": -47.9297, "finished_processes": 6220, "movements": 31, "group_id": 111, "days_finish_process": 4288, "time_distribuicao": 4954, "time_decisao": 4151, "time_conclusao": 3809, "time_julgamento": 5022, "ranking": 40}}, {"model": "performance.Vara", "pk": 85, "fields": {"vara_id": 85, "name": "VILA VELHA - 1\u00aa VARA DA FAZENDA MUNICIPAL - TJES", "latitude": -20.3417, "longitude": -40.2875, "finished_processes": 47, "movements": 40, "group_id": 98, "days_finish_process": 3322, "time_distribuicao": 47, "time_conclusao": 18, "time_despacho": 9, "time_julgamento": 20, "ranking": 6}}, {"model": "performance.Vara", "pk": 86, "fields": {"vara_id": 86, "name": "CIANORTE - 1\u00aa VARA C\u00cdVEL E DA FAZENDA P\u00daBLICA - TJPR", "latitude": -23.6599, "longitude": -52.6054, "finished_processes": 53, "movements": 15, "group_id": 98, "days_finish_process": 154, "time_distribuicao": 25, "time_conclusao": 25, "time_julgamento": 22, "time_decisao": 23, "ranking": 2}}, {"model": "performance.Vara", "pk": 87, "fields": {"vara_id": 87, "name": "4\u00aa VARA DA FAZENDA P\u00daBLICA - TJBA", "latitude": null, "longitude": null, "finished_processes": 51, "movements": 16, "group_id": 98, "days_finish_process": 7014, "time_distribuicao": 22, "time_conclusao": 15, "time_despacho": 12, "time_julgamento": 8, "time_decisao": 26, "ranking": 10}}, {"model": "performance.Vara", "pk": 88, "fields": {"vara_id": 88, "name": "2\u00aa VARA DA FAZENDA P\u00daBLICA - TJBA", "latitude": null, "longitude": null, "finished_processes": 53, "movements": 8, "group_id": 98, "days_finish_process": 8574, "time_distribuicao": 29, "time_julgamento": 11, "time_despacho": 16, "ranking": 11}}, {"model": "performance.Vara", "pk": 89, "fields": {"vara_id": 89, "name": "2\u00aa VARA DA FAZENDA P\u00daBLICA DA COMARCA DE CARUARU - TJPE", "latitude": -8.28455, "longitude": -35.9699, "finished_processes": 56, "movements": 27, "group_id": 98, "days_finish_process": 8778, "time_distribuicao": 56, "time_conclusao": 40, "time_despacho": 37, "time_julgamento": 56, "ranking": 12}}, {"model": "performance.Vara", "pk": 90, "fields": {"vara_id": 90, "name": "10\u00aa VARA FAZENDA P\u00daBLICA DE S\u00c3O LU\u00cdS - TJMA", "latitude": -2.53874, "longitude": -44.2825, "finished_processes": 71, "movements": 33, "group_id": 98, "days_finish_process": 3010, "time_distribuicao": 26, "time_conclusao": 59, "time_despacho": 55, "time_julgamento": 60, "ranking": 5}}, {"model": "performance.Vara", "pk": 91, "fields": {"vara_id": 91, "name": "VARA DOS EXECUTIVOS FISCAIS MUNICIPAIS DA CAPITAL - TJPE", "latitude": -8.046660000000001, "longitude": -34.8771, "finished_processes": 80, "movements": 14, "group_id": 98, "days_finish_process": 3611, "time_distribuicao": 79, "time_conclusao": 75, "time_despacho": 67, "ranking": 8}}, {"model": "performance.Vara", "pk": 92, "fields": {"vara_id": 92, "name": "4A. VARA DE SANTA RITA - TJPB", "latitude": null, "longitude": null, "finished_processes": 81, "movements": 9, "group_id": 98, "days_finish_process": 150, "time_distribuicao": 12, "time_conclusao": 37, "time_julgamento": 27, "ranking": 1}}, {"model": "performance.Vara", "pk": 93, "fields": {"vara_id": 93, "name": "1\u00aa VARA C\u00cdVEL E EMPRESARIAL DE CASTANHAL - TJPA", "latitude": -1.29797, "longitude": -47.9167, "finished_processes": 113, "movements": 21, "group_id": 98, "days_finish_process": 2977, "time_distribuicao": 113, "time_conclusao": 113, "time_despacho": 51, "time_decisao": 15, "time_julgamento": 59, "ranking": 4}}, {"model": "performance.Vara", "pk": 94, "fields": {"vara_id": 94, "name": "1\u00aa VARA DE SANTA IN\u00caS - TJMA", "latitude": -3.6511199999999997, "longitude": -45.3774, "finished_processes": 121, "movements": 22, "group_id": 98, "days_finish_process": 2399, "time_distribuicao": 12, "time_conclusao": 45, "time_despacho": 48, "time_julgamento": 27, "ranking": 3}}, {"model": "performance.Vara", "pk": 95, "fields": {"vara_id": 95, "name": "MARATA\u00cdZES - VARA DE FAZ PUBLICA EST MUN REG PUBLICOS - TJES", "latitude": -21.0398, "longitude": -40.8384, "finished_processes": 225, "movements": 36, "group_id": 98, "days_finish_process": 4789, "time_distribuicao": 140, "time_conclusao": 88, "time_decisao": 20, "time_despacho": 73, "time_julgamento": 203, "ranking": 9}}, {"model": "performance.Vara", "pk": 96, "fields": {"vara_id": 96, "name": "V DOS FEITOS DE REL DE CONS CIV E COMERCIAIS DE SANTA MARIA DA VIT\u00d3RIA - TJBA", "latitude": -13.3859, "longitude": -44.2011, "finished_processes": 316, "movements": 9, "group_id": 98, "days_finish_process": 3486, "time_distribuicao": 260, "time_despacho": 236, "time_conclusao": 211, "time_julgamento": 278, "ranking": 7}}]
+[
+  {
+    "model": "performance.Vara",
+    "pk": 20,
+    "fields": {
+      "vara_id": 20,
+      "name": "VARA CÍVEL - TJAC",
+      "latitude": -10.1497,
+      "longitude": -67.7362,
+      "finished_processes": 46,
+      "movements": 90,
+      "group_id": 256,
+      "days_finish_process": 2160,
+      "time_distribuicao": 40,
+      "time_conclusao": 28,
+      "time_decisao": 30,
+      "time_julgamento": 18,
+      "ranking": 5
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 21,
+    "fields": {
+      "vara_id": 21,
+      "name": "CAPELA - TJSE",
+      "latitude": -10.5069,
+      "longitude": -37.0628,
+      "finished_processes": 52,
+      "movements": 63,
+      "group_id": 256,
+      "days_finish_process": 6031,
+      "time_distribuicao": 42,
+      "time_conclusao": 42,
+      "time_decisao": 35,
+      "time_julgamento": 49,
+      "ranking": 14
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 22,
+    "fields": {
+      "vara_id": 22,
+      "name": "JUIZO DA 1ª VARA DOS FEITOS DAS FAZENDAS E REG. PÚBLICOS E PREC. CÍVEIS DE PARAÍSO DO TOCANTINS - TJTO",
+      "latitude": -10.1754144,
+      "longitude": -48.8827025,
+      "finished_processes": 59,
+      "movements": 27,
+      "group_id": 256,
+      "days_finish_process": 1736,
+      "time_distribuicao": 24,
+      "time_despacho": 4,
+      "time_decisao": 6,
+      "time_conclusao": 12,
+      "time_julgamento": 35,
+      "ranking": 3
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 23,
+    "fields": {
+      "vara_id": 23,
+      "name": "VARA CÍVEL - TJRR",
+      "latitude": 1.01019,
+      "longitude": -60.0419,
+      "finished_processes": 56,
+      "movements": 64,
+      "group_id": 256,
+      "days_finish_process": 2132,
+      "time_distribuicao": 28,
+      "time_conclusao": 39,
+      "time_despacho": 35,
+      "time_decisao": 14,
+      "time_julgamento": 16,
+      "ranking": 4
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 24,
+    "fields": {
+      "vara_id": 24,
+      "name": "JUÍZO DA 1ª VARA CÍVEL DE MIRACEMA DO TOCANTINS - TJTO",
+      "latitude": -9.5659692,
+      "longitude": -48.393409,
+      "finished_processes": 79,
+      "movements": 30,
+      "group_id": 256,
+      "days_finish_process": 901,
+      "time_distribuicao": 76,
+      "time_conclusao": 61,
+      "time_despacho": 42,
+      "time_julgamento": 53,
+      "ranking": 1
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 25,
+    "fields": {
+      "vara_id": 25,
+      "name": "1ª VARA GENÉRICA - TJRO",
+      "latitude": -11.5266,
+      "longitude": -61.0252,
+      "finished_processes": 86,
+      "movements": 9,
+      "group_id": 256,
+      "days_finish_process": 3146,
+      "time_distribuicao": 86,
+      "time_conclusao": 70,
+      "time_despacho": 34,
+      "time_decisao": 32,
+      "time_julgamento": 82,
+      "ranking": 12
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 26,
+    "fields": {
+      "vara_id": 26,
+      "name": "2ª VARA GENÉRICA - TJRO",
+      "latitude": -11.5266,
+      "longitude": -61.0252,
+      "finished_processes": 92,
+      "movements": 8,
+      "group_id": 256,
+      "days_finish_process": 2587,
+      "time_distribuicao": 92,
+      "time_conclusao": 74,
+      "time_despacho": 31,
+      "time_decisao": 31,
+      "time_julgamento": 92,
+      "ranking": 11
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 27,
+    "fields": {
+      "vara_id": 27,
+      "name": "VARA UNICA - TJRO",
+      "latitude": -11.169,
+      "longitude": -61.8986,
+      "finished_processes": 94,
+      "movements": 13,
+      "group_id": 256,
+      "days_finish_process": 2513,
+      "time_distribuicao": 86,
+      "time_conclusao": 86,
+      "time_despacho": 69,
+      "time_decisao": 39,
+      "time_julgamento": 88,
+      "ranking": 9
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 28,
+    "fields": {
+      "vara_id": 28,
+      "name": "1ª VARA CÍVEL - TJRO",
+      "latitude": -9.905710000000001,
+      "longitude": -63.0325,
+      "finished_processes": 106,
+      "movements": 6,
+      "group_id": 256,
+      "days_finish_process": 2365,
+      "time_distribuicao": 105,
+      "time_conclusao": 75,
+      "time_julgamento": 104,
+      "ranking": 8
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 29,
+    "fields": {
+      "vara_id": 29,
+      "name": "4ª VARA CIVEL - TJRO",
+      "latitude": -9.905710000000001,
+      "longitude": -63.0325,
+      "finished_processes": 162,
+      "movements": 12,
+      "group_id": 256,
+      "days_finish_process": 2308,
+      "time_distribuicao": 162,
+      "time_conclusao": 63,
+      "time_despacho": 31,
+      "time_decisao": 55,
+      "time_julgamento": 118,
+      "ranking": 7
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 30,
+    "fields": {
+      "vara_id": 30,
+      "name": "3ª VARA CIVEL - TJRO",
+      "latitude": -9.905710000000001,
+      "longitude": -63.0325,
+      "finished_processes": 163,
+      "movements": 12,
+      "group_id": 256,
+      "days_finish_process": 2240,
+      "time_distribuicao": 132,
+      "time_conclusao": 37,
+      "time_despacho": 24,
+      "time_decisao": 54,
+      "time_julgamento": 103,
+      "ranking": 6
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 31,
+    "fields": {
+      "vara_id": 31,
+      "name": "2ª VARA CIVEL - TJRO",
+      "latitude": -9.905710000000001,
+      "longitude": -63.0325,
+      "finished_processes": 211,
+      "movements": 9,
+      "group_id": 256,
+      "days_finish_process": 2549,
+      "time_distribuicao": 191,
+      "time_conclusao": 84,
+      "time_despacho": 24,
+      "time_decisao": 46,
+      "time_julgamento": 161,
+      "ranking": 10
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 32,
+    "fields": {
+      "vara_id": 32,
+      "name": "JUÍZO DA 2ª VARA CÍVEL DE PORTO NACIONAL - TJTO",
+      "latitude": -10.7189187,
+      "longitude": -48.4061335,
+      "finished_processes": 296,
+      "movements": 33,
+      "group_id": 256,
+      "days_finish_process": 1485,
+      "time_distribuicao": 267,
+      "time_despacho": 251,
+      "time_conclusao": 185,
+      "time_julgamento": 274,
+      "ranking": 2
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 33,
+    "fields": {
+      "vara_id": 33,
+      "name": "1ª VARA CIVEL - TJRO",
+      "latitude": -11.672,
+      "longitude": -61.198,
+      "finished_processes": 328,
+      "movements": 12,
+      "group_id": 256,
+      "days_finish_process": 3479,
+      "time_distribuicao": 324,
+      "time_conclusao": 252,
+      "time_despacho": 112,
+      "time_decisao": 110,
+      "time_julgamento": 274,
+      "ranking": 13
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 34,
+    "fields": {
+      "vara_id": 34,
+      "name": "1ª V DOS FEITOS DE REL DE CONS CIV E COMERCIAIS - TJBA",
+      "latitude": -12.427999999999999,
+      "longitude": -39.2505,
+      "finished_processes": 42,
+      "movements": 40,
+      "group_id": 111,
+      "days_finish_process": 3497,
+      "time_distribuicao": 42,
+      "time_conclusao": 25,
+      "time_despacho": 25,
+      "time_julgamento": 23,
+      "ranking": 36
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 35,
+    "fields": {
+      "vara_id": 35,
+      "name": "VITÓRIA - 2ª VARA EXECUÇÕES FISCAIS - TJES",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 59,
+      "movements": 89,
+      "group_id": 111,
+      "days_finish_process": 2939,
+      "time_distribuicao": 59,
+      "time_conclusao": 48,
+      "time_decisao": 33,
+      "time_julgamento": 33,
+      "ranking": 27
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 36,
+    "fields": {
+      "vara_id": 36,
+      "name": "3ª VARA DOS FEITOS DA FAZENDA PÚBLICA DE TERESINA - TJPI",
+      "latitude": -5.09194,
+      "longitude": -42.8034,
+      "finished_processes": 62,
+      "movements": 40,
+      "group_id": 111,
+      "days_finish_process": 7826,
+      "time_distribuicao": 41,
+      "time_conclusao": 33,
+      "time_despacho": 30,
+      "time_julgamento": 48,
+      "ranking": 48
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 37,
+    "fields": {
+      "vara_id": 37,
+      "name": "1ª VARA DE EXECUTIVOS FISCAIS - TJPB",
+      "latitude": -7.1150899999999995,
+      "longitude": -34.8641,
+      "finished_processes": 69,
+      "movements": 13,
+      "group_id": 111,
+      "days_finish_process": 3096,
+      "time_distribuicao": 61,
+      "time_conclusao": 57,
+      "time_julgamento": 30,
+      "time_despacho": 21,
+      "ranking": 30
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 38,
+    "fields": {
+      "vara_id": 38,
+      "name": "2ª VARA DE EXECUÇÃO FISCAL E TRIBUTÁRIA - TJRN",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 77,
+      "movements": 26,
+      "group_id": 111,
+      "days_finish_process": 4263,
+      "time_distribuicao": 44,
+      "time_conclusao": 35,
+      "time_despacho": 16,
+      "time_decisao": 24,
+      "time_julgamento": 39,
+      "ranking": 39
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 39,
+    "fields": {
+      "vara_id": 39,
+      "name": "VARA DE EXECUÇÃO FISCAL - TJAC",
+      "latitude": -9.97499,
+      "longitude": -67.8243,
+      "finished_processes": 80,
+      "movements": 48,
+      "group_id": 111,
+      "days_finish_process": 1508,
+      "time_distribuicao": 67,
+      "time_conclusao": 67,
+      "time_decisao": 67,
+      "time_julgamento": 75,
+      "ranking": 14
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 40,
+    "fields": {
+      "vara_id": 40,
+      "name": "VARA DA FAZENDA PÚBLICA DA COMARCA DE PAULISTA - TJPE",
+      "latitude": -7.934010000000001,
+      "longitude": -34.8684,
+      "finished_processes": 91,
+      "movements": 34,
+      "group_id": 111,
+      "days_finish_process": 3481,
+      "time_distribuicao": 91,
+      "time_conclusao": 91,
+      "time_despacho": 75,
+      "time_decisao": 60,
+      "ranking": 35
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 41,
+    "fields": {
+      "vara_id": 41,
+      "name": "1ª V DA FAZENDA PÚBLICA DA COMARCA DE SIMÕES FILHO - TJBA",
+      "latitude": -12.7866,
+      "longitude": -38.4029,
+      "finished_processes": 120,
+      "movements": 7,
+      "group_id": 111,
+      "days_finish_process": 92,
+      "time_distribuicao": 120,
+      "time_despacho": 120,
+      "time_julgamento": 120,
+      "ranking": 2
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 42,
+    "fields": {
+      "vara_id": 42,
+      "name": "1ª VARA DOS EXECUTIVOS FISCAIS ESTADUAIS DA CAPITAL - TJPE",
+      "latitude": -8.046660000000001,
+      "longitude": -34.8771,
+      "finished_processes": 133,
+      "movements": 34,
+      "group_id": 111,
+      "days_finish_process": 9632,
+      "time_distribuicao": 114,
+      "time_conclusao": 95,
+      "time_despacho": 69,
+      "time_julgamento": 74,
+      "ranking": 50
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 43,
+    "fields": {
+      "vara_id": 43,
+      "name": "QUARTA VARA - COMARCA DE PRIMAVERA DO LESTE - SDCR - TJMT",
+      "latitude": -15.544,
+      "longitude": -54.2811,
+      "finished_processes": 141,
+      "movements": 95,
+      "group_id": 111,
+      "days_finish_process": 2379,
+      "time_distribuicao": 136,
+      "time_conclusao": 90,
+      "time_despacho": 49,
+      "time_decisao": 16,
+      "time_julgamento": 37,
+      "ranking": 22
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 44,
+    "fields": {
+      "vara_id": 44,
+      "name": "PONTA GROSSA - 1ª VARA DA FAZENDA PÚBLICA - TJPR",
+      "latitude": -25.0916,
+      "longitude": -50.1668,
+      "finished_processes": 145,
+      "movements": 54,
+      "group_id": 111,
+      "days_finish_process": 1523,
+      "time_distribuicao": 100,
+      "time_conclusao": 58,
+      "time_decisao": 52,
+      "time_julgamento": 127,
+      "ranking": 15
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 45,
+    "fields": {
+      "vara_id": 45,
+      "name": "VARA ESPECIALIZADA DA FAZENDA PÚBLICA  - SDCR - TJMT",
+      "latitude": -11.8604,
+      "longitude": -55.5091,
+      "finished_processes": 157,
+      "movements": 20,
+      "group_id": 111,
+      "days_finish_process": 112,
+      "time_distribuicao": 117,
+      "time_conclusao": 61,
+      "time_despacho": 111,
+      "ranking": 3
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 46,
+    "fields": {
+      "vara_id": 46,
+      "name": "VITÓRIA - 1ª VARA EXECUÇÕES FISCAIS - TJES",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 149,
+      "movements": 107,
+      "group_id": 111,
+      "days_finish_process": 6155,
+      "time_distribuicao": 140,
+      "time_conclusao": 108,
+      "time_decisao": 79,
+      "time_julgamento": 95,
+      "ranking": 43
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 47,
+    "fields": {
+      "vara_id": 47,
+      "name": "1A. VARA DE EXECUTIVO FISCAL JOAO PESSOA - TJPB",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 156,
+      "movements": 13,
+      "group_id": 111,
+      "days_finish_process": 1209,
+      "time_distribuicao": 108,
+      "time_conclusao": 109,
+      "time_despacho": 98,
+      "time_julgamento": 101,
+      "ranking": 12
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 48,
+    "fields": {
+      "vara_id": 48,
+      "name": "LONDRINA - 2ª VARA DE EXECUÇÕES FISCAIS - TJPR",
+      "latitude": -23.304000000000002,
+      "longitude": -51.1691,
+      "finished_processes": 162,
+      "movements": 47,
+      "group_id": 111,
+      "days_finish_process": 906,
+      "time_distribuicao": 84,
+      "time_decisao": 84,
+      "time_conclusao": 96,
+      "time_julgamento": 149,
+      "ranking": 10
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 49,
+    "fields": {
+      "vara_id": 49,
+      "name": "JUIZO DA 2ª VARA DA FAZENDA E REGISTROS PÚBLICOS DE ARAGUAÍNA - TJTO",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 182,
+      "movements": 20,
+      "group_id": 111,
+      "days_finish_process": 699,
+      "time_distribuicao": 172,
+      "time_conclusao": 123,
+      "time_julgamento": 168,
+      "ranking": 9
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 50,
+    "fields": {
+      "vara_id": 50,
+      "name": "2A. VARA DE EXECUTIVO FISCAL JOAO PESSOA - TJPB",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 181,
+      "movements": 23,
+      "group_id": 111,
+      "days_finish_process": 1954,
+      "time_distribuicao": 121,
+      "time_conclusao": 114,
+      "time_despacho": 96,
+      "time_julgamento": 133,
+      "ranking": 18
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 51,
+    "fields": {
+      "vara_id": 51,
+      "name": "LONDRINA - 1ª VARA DE EXECUÇÕES FISCAIS - TJPR",
+      "latitude": -23.304000000000002,
+      "longitude": -51.1691,
+      "finished_processes": 189,
+      "movements": 26,
+      "group_id": 111,
+      "days_finish_process": 503,
+      "time_distribuicao": 112,
+      "time_conclusao": 79,
+      "time_julgamento": 101,
+      "ranking": 8
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 52,
+    "fields": {
+      "vara_id": 52,
+      "name": "VARA DA FAZENDA PÚBLICA DA COMARCA DE SANTA CRUZ DO CAPIBARIBE - TJPE",
+      "latitude": -7.94802,
+      "longitude": -36.2061,
+      "finished_processes": 190,
+      "movements": 24,
+      "group_id": 111,
+      "days_finish_process": 2153,
+      "time_distribuicao": 190,
+      "time_conclusao": 190,
+      "time_despacho": 182,
+      "time_julgamento": 188,
+      "ranking": 20
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 53,
+    "fields": {
+      "vara_id": 53,
+      "name": "PONTA GROSSA - 2ª VARA DA FAZENDA PÚBLICA - TJPR",
+      "latitude": -25.0916,
+      "longitude": -50.1668,
+      "finished_processes": 203,
+      "movements": 50,
+      "group_id": 111,
+      "days_finish_process": 1275,
+      "time_distribuicao": 159,
+      "time_conclusao": 74,
+      "time_decisao": 65,
+      "time_julgamento": 69,
+      "ranking": 13
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 54,
+    "fields": {
+      "vara_id": 54,
+      "name": "CURITIBA - 1ª VARA DE EXECUÇÕES FISCAIS ESTADUAIS - TJPR",
+      "latitude": -25.4195,
+      "longitude": -49.2646,
+      "finished_processes": 214,
+      "movements": 22,
+      "group_id": 111,
+      "days_finish_process": 422,
+      "time_distribuicao": 46,
+      "time_decisao": 52,
+      "time_conclusao": 73,
+      "time_despacho": 1,
+      "time_julgamento": 24,
+      "ranking": 6
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 55,
+    "fields": {
+      "vara_id": 55,
+      "name": "MATELÂNDIA - VARA CÍVEL, DA FAZENDA PÚBLICA, ACIDENTES DO TRABALHO, REGISTROS PÚBLICOS E CORREGEDORIA DO FORO EXTRAJUDICIAL, JUIZADO ESPECIAL CÍVEL E JUIZADO ESPECIAL DA FAZENDA PÚBLICA - TJPR",
+      "latitude": -25.2496,
+      "longitude": -53.9935,
+      "finished_processes": 258,
+      "movements": 34,
+      "group_id": 111,
+      "days_finish_process": 148,
+      "time_distribuicao": 254,
+      "time_conclusao": 107,
+      "time_despacho": 97,
+      "time_julgamento": 196,
+      "ranking": 4
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 56,
+    "fields": {
+      "vara_id": 56,
+      "name": "1ª VARA DA FAZENDA PÚBLICA - TJAC",
+      "latitude": -9.97499,
+      "longitude": -67.8243,
+      "finished_processes": 278,
+      "movements": 28,
+      "group_id": 111,
+      "days_finish_process": 498,
+      "time_distribuicao": 188,
+      "time_conclusao": 130,
+      "time_decisao": 134,
+      "time_julgamento": 122,
+      "ranking": 7
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 57,
+    "fields": {
+      "vara_id": 57,
+      "name": "PORTO VELHO - 2ª VARA DE EXECUÇÕES FISCAIS - TJRO",
+      "latitude": -8.760769999999999,
+      "longitude": -63.8999,
+      "finished_processes": 296,
+      "movements": 13,
+      "group_id": 111,
+      "days_finish_process": 2899,
+      "time_distribuicao": 294,
+      "time_conclusao": 160,
+      "time_julgamento": 208,
+      "ranking": 26
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 58,
+    "fields": {
+      "vara_id": 58,
+      "name": "CURITIBA - 2ª VARA DE EXECUÇÕES FISCAIS ESTADUAIS - TJPR",
+      "latitude": -25.4195,
+      "longitude": -49.2646,
+      "finished_processes": 301,
+      "movements": 16,
+      "group_id": 111,
+      "days_finish_process": 90,
+      "time_distribuicao": 284,
+      "time_conclusao": 256,
+      "time_julgamento": 256,
+      "ranking": 1
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 59,
+    "fields": {
+      "vara_id": 59,
+      "name": "CACHOEIRO DE ITAPEMIRIM - 2ª VARA FAZENDA PÚBLICA ESTADUAL, MUNICIPAL, REG PÚBLICOS, MEIO AMBIENTE E SAÚDE - TJES",
+      "latitude": -20.8462,
+      "longitude": -41.1198,
+      "finished_processes": 320,
+      "movements": 22,
+      "group_id": 111,
+      "days_finish_process": 1688,
+      "time_distribuicao": 190,
+      "time_conclusao": 148,
+      "time_julgamento": 184,
+      "ranking": 17
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 60,
+    "fields": {
+      "vara_id": 60,
+      "name": "VARA DA FAZENDA PÚBLICA - TJRN",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 330,
+      "movements": 31,
+      "group_id": 111,
+      "days_finish_process": 2798,
+      "time_distribuicao": 187,
+      "time_conclusao": 179,
+      "time_despacho": 143,
+      "time_decisao": 224,
+      "time_julgamento": 233,
+      "ranking": 25
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 61,
+    "fields": {
+      "vara_id": 61,
+      "name": "VARA UNICA DE NHANDEARA - TJSP",
+      "latitude": -20.6945,
+      "longitude": -50.0436,
+      "finished_processes": 364,
+      "movements": 12,
+      "group_id": 111,
+      "days_finish_process": 22617,
+      "time_distribuicao": 355,
+      "time_despacho": 355,
+      "ranking": 51
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 62,
+    "fields": {
+      "vara_id": 62,
+      "name": "1ª VARA DE EXECUÇÃO FISCAL E TRIBUTÁRIA - TJRN",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 348,
+      "movements": 39,
+      "group_id": 111,
+      "days_finish_process": 4689,
+      "time_distribuicao": 244,
+      "time_conclusao": 239,
+      "time_despacho": 182,
+      "time_decisao": 218,
+      "time_julgamento": 121,
+      "ranking": 41
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 63,
+    "fields": {
+      "vara_id": 63,
+      "name": "5? VARA DA FAZENDA P?BLICA DO DF - TJDFT",
+      "latitude": -15.7795,
+      "longitude": -47.9297,
+      "finished_processes": 351,
+      "movements": 35,
+      "group_id": 111,
+      "days_finish_process": 6812,
+      "time_distribuicao": 275,
+      "time_conclusao": 275,
+      "time_decisao": 271,
+      "ranking": 44
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 64,
+    "fields": {
+      "vara_id": 64,
+      "name": "8ª VARA DA FAZENDA PÚBLICA DE SÃO LUÍS - TJMA",
+      "latitude": -2.53874,
+      "longitude": -44.2825,
+      "finished_processes": 388,
+      "movements": 25,
+      "group_id": 111,
+      "days_finish_process": 3021,
+      "time_distribuicao": 104,
+      "time_conclusao": 188,
+      "time_despacho": 219,
+      "time_julgamento": 371,
+      "ranking": 29
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 65,
+    "fields": {
+      "vara_id": 65,
+      "name": "8? VARA DA FAZENDA P?BLICA DO DF - TJDFT",
+      "latitude": -15.7795,
+      "longitude": -47.9297,
+      "finished_processes": 394,
+      "movements": 38,
+      "group_id": 111,
+      "days_finish_process": 6819,
+      "time_distribuicao": 198,
+      "time_conclusao": 185,
+      "time_decisao": 108,
+      "time_julgamento": 200,
+      "ranking": 46
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 66,
+    "fields": {
+      "vara_id": 66,
+      "name": "COLOMBO - VARA DA FAZENDA PÚBLICA - TJPR",
+      "latitude": -25.2925,
+      "longitude": -49.2262,
+      "finished_processes": 401,
+      "movements": 23,
+      "group_id": 111,
+      "days_finish_process": 1661,
+      "time_distribuicao": 326,
+      "time_conclusao": 250,
+      "time_julgamento": 311,
+      "ranking": 16
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 67,
+    "fields": {
+      "vara_id": 67,
+      "name": "VITÓRIA - 1ª VARA DE FAZENDA PÚBLICA PRIVATIVA DE EXECUÇÕES FISCAIS MUNICIPAIS - TJES",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 403,
+      "movements": 79,
+      "group_id": 111,
+      "days_finish_process": 2954,
+      "time_distribuicao": 378,
+      "time_conclusao": 281,
+      "time_decisao": 219,
+      "time_julgamento": 309,
+      "ranking": 28
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 68,
+    "fields": {
+      "vara_id": 68,
+      "name": "1ª VARA DA FAZENDA PÚBLICA - TJBA",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 444,
+      "movements": 10,
+      "group_id": 111,
+      "days_finish_process": 3394,
+      "time_distribuicao": 129,
+      "time_conclusao": 87,
+      "time_despacho": 198,
+      "time_julgamento": 336,
+      "ranking": 34
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 69,
+    "fields": {
+      "vara_id": 69,
+      "name": "6? VARA DA FAZENDA P?BLICA DO DF - TJDFT",
+      "latitude": -15.7795,
+      "longitude": -47.9297,
+      "finished_processes": 453,
+      "movements": 39,
+      "group_id": 111,
+      "days_finish_process": 6816,
+      "time_distribuicao": 396,
+      "time_conclusao": 400,
+      "time_decisao": 110,
+      "time_julgamento": 110,
+      "time_despacho": 284,
+      "ranking": 45
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 70,
+    "fields": {
+      "vara_id": 70,
+      "name": "VARA ESPECIALIZADA DE EXECUÇÃO FISCAL - SDCR - TJMT",
+      "latitude": -15.600999999999999,
+      "longitude": -56.0974,
+      "finished_processes": 497,
+      "movements": 59,
+      "group_id": 111,
+      "days_finish_process": 3498,
+      "time_distribuicao": 410,
+      "time_conclusao": 326,
+      "time_decisao": 268,
+      "time_despacho": 250,
+      "time_julgamento": 285,
+      "ranking": 37
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 71,
+    "fields": {
+      "vara_id": 71,
+      "name": "ITAPEMIRIM - 1ª VARA CÍVEL - TJES",
+      "latitude": -21.0095,
+      "longitude": -40.8307,
+      "finished_processes": 521,
+      "movements": 33,
+      "group_id": 111,
+      "days_finish_process": 2505,
+      "time_distribuicao": 521,
+      "time_conclusao": 214,
+      "time_despacho": 113,
+      "time_julgamento": 209,
+      "ranking": 24
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 72,
+    "fields": {
+      "vara_id": 72,
+      "name": "CURITIBA - 1ª VARA DE EXECUÇÕES FISCAIS MUNICIPAIS - TJPR",
+      "latitude": -25.4195,
+      "longitude": -49.2646,
+      "finished_processes": 528,
+      "movements": 21,
+      "group_id": 111,
+      "days_finish_process": 960,
+      "time_distribuicao": 344,
+      "ranking": 11
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 73,
+    "fields": {
+      "vara_id": 73,
+      "name": "1ª VARA DE EXECUÇÃO FISCAL DE BELÉM - TJPA",
+      "latitude": -1.4554,
+      "longitude": -48.4898,
+      "finished_processes": 554,
+      "movements": 21,
+      "group_id": 111,
+      "days_finish_process": 2450,
+      "time_distribuicao": 554,
+      "time_conclusao": 190,
+      "time_despacho": 114,
+      "time_decisao": 273,
+      "time_julgamento": 257,
+      "ranking": 23
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 74,
+    "fields": {
+      "vara_id": 74,
+      "name": "VARA DOS EXECUTIVOS FISCAIS DA COMARCA DE JABOATÃO DOS GUARARAPES - TJPE",
+      "latitude": -8.11298,
+      "longitude": -35.015,
+      "finished_processes": 613,
+      "movements": 24,
+      "group_id": 111,
+      "days_finish_process": 3528,
+      "time_distribuicao": 592,
+      "time_conclusao": 498,
+      "time_despacho": 157,
+      "time_decisao": 54,
+      "time_julgamento": 346,
+      "ranking": 38
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 75,
+    "fields": {
+      "vara_id": 75,
+      "name": "2ª VARA DE EXECUÇÕES FISCAIS - TJRO",
+      "latitude": -8.760769999999999,
+      "longitude": -63.8999,
+      "finished_processes": 660,
+      "movements": 13,
+      "group_id": 111,
+      "days_finish_process": 5269,
+      "time_distribuicao": 625,
+      "time_conclusao": 406,
+      "time_julgamento": 517,
+      "ranking": 42
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 76,
+    "fields": {
+      "vara_id": 76,
+      "name": "PARANAGUÁ - VARA DA FAZENDA PÚBLICA - TJPR",
+      "latitude": -25.5161,
+      "longitude": -48.5225,
+      "finished_processes": 675,
+      "movements": 17,
+      "group_id": 111,
+      "days_finish_process": 368,
+      "time_distribuicao": 265,
+      "time_conclusao": 272,
+      "time_julgamento": 255,
+      "ranking": 5
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 77,
+    "fields": {
+      "vara_id": 77,
+      "name": "6ª VARA CÍVEL E EMPRESARIAL DE SANTARÉM - TJPA",
+      "latitude": -2.4384900000000003,
+      "longitude": -54.6996,
+      "finished_processes": 691,
+      "movements": 20,
+      "group_id": 111,
+      "days_finish_process": 2110,
+      "time_distribuicao": 686,
+      "time_conclusao": 663,
+      "time_despacho": 492,
+      "time_decisao": 493,
+      "time_julgamento": 382,
+      "ranking": 19
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 78,
+    "fields": {
+      "vara_id": 78,
+      "name": "CACHOEIRO DE ITAPEMIRIM - 1ª VARA FAZENDA PÚBLICA ESTADUAL, MUNICIPAL, REG PÚBLICOS, MEIO AMBIENTE E SAÚDE - TJES",
+      "latitude": -20.8462,
+      "longitude": -41.1198,
+      "finished_processes": 719,
+      "movements": 51,
+      "group_id": 111,
+      "days_finish_process": 3204,
+      "time_distribuicao": 697,
+      "time_conclusao": 446,
+      "time_despacho": 393,
+      "time_julgamento": 665,
+      "ranking": 31
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 79,
+    "fields": {
+      "vara_id": 79,
+      "name": "22 ª VARA CÍVEL DE ARACAJU - TJSE",
+      "latitude": -10.9091,
+      "longitude": -37.0677,
+      "finished_processes": 926,
+      "movements": 93,
+      "group_id": 111,
+      "days_finish_process": 3349,
+      "time_distribuicao": 489,
+      "time_conclusao": 474,
+      "time_decisao": 336,
+      "time_despacho": 497,
+      "time_julgamento": 677,
+      "ranking": 33
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 80,
+    "fields": {
+      "vara_id": 80,
+      "name": "2ª VARA DOS EXECUTIVOS FISCAIS ESTADUAIS DA CAPITAL - TJPE",
+      "latitude": -8.046660000000001,
+      "longitude": -34.8771,
+      "finished_processes": 1422,
+      "movements": 30,
+      "group_id": 111,
+      "days_finish_process": 9149,
+      "time_distribuicao": 1301,
+      "time_conclusao": 1338,
+      "time_despacho": 1093,
+      "time_julgamento": 1185,
+      "ranking": 49
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 81,
+    "fields": {
+      "vara_id": 81,
+      "name": "3ª VARA DE FEITOS DA FAZENDA PÚBLICA - TJPI",
+      "latitude": -5.09194,
+      "longitude": -42.8034,
+      "finished_processes": 1861,
+      "movements": 28,
+      "group_id": 111,
+      "days_finish_process": 6951,
+      "time_distribuicao": 852,
+      "time_despacho": 843,
+      "time_conclusao": 1046,
+      "time_julgamento": 1618,
+      "ranking": 47
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 82,
+    "fields": {
+      "vara_id": 82,
+      "name": "20 ª VARA CÍVEL DE ARACAJU - TJSE",
+      "latitude": -10.9091,
+      "longitude": -37.0677,
+      "finished_processes": 1831,
+      "movements": 72,
+      "group_id": 111,
+      "days_finish_process": 3309,
+      "time_distribuicao": 1524,
+      "time_conclusao": 1461,
+      "time_decisao": 531,
+      "time_despacho": 465,
+      "time_julgamento": 1043,
+      "ranking": 32
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 83,
+    "fields": {
+      "vara_id": 83,
+      "name": "JUIZO DA VARA DE EXECUÇÕES FISCAIS E SAÚDE DE PALMAS - TJTO",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 2239,
+      "movements": 36,
+      "group_id": 111,
+      "days_finish_process": 2211,
+      "time_distribuicao": 1653,
+      "time_conclusao": 1432,
+      "time_despacho": 1183,
+      "time_julgamento": 1830,
+      "ranking": 21
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 84,
+    "fields": {
+      "vara_id": 84,
+      "name": "VARA DE EXECU??O FISCAL DO DF - TJDFT",
+      "latitude": -15.7795,
+      "longitude": -47.9297,
+      "finished_processes": 6220,
+      "movements": 31,
+      "group_id": 111,
+      "days_finish_process": 4288,
+      "time_distribuicao": 4954,
+      "time_decisao": 4151,
+      "time_conclusao": 3809,
+      "time_julgamento": 5022,
+      "ranking": 40
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 85,
+    "fields": {
+      "vara_id": 85,
+      "name": "VILA VELHA - 1ª VARA DA FAZENDA MUNICIPAL - TJES",
+      "latitude": -20.3417,
+      "longitude": -40.2875,
+      "finished_processes": 47,
+      "movements": 40,
+      "group_id": 98,
+      "days_finish_process": 3322,
+      "time_distribuicao": 47,
+      "time_conclusao": 18,
+      "time_despacho": 9,
+      "time_julgamento": 20,
+      "ranking": 6
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 86,
+    "fields": {
+      "vara_id": 86,
+      "name": "CIANORTE - 1ª VARA CÍVEL E DA FAZENDA PÚBLICA - TJPR",
+      "latitude": -23.6599,
+      "longitude": -52.6054,
+      "finished_processes": 53,
+      "movements": 15,
+      "group_id": 98,
+      "days_finish_process": 154,
+      "time_distribuicao": 25,
+      "time_conclusao": 25,
+      "time_julgamento": 22,
+      "time_decisao": 23,
+      "ranking": 2
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 87,
+    "fields": {
+      "vara_id": 87,
+      "name": "4ª VARA DA FAZENDA PÚBLICA - TJBA",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 51,
+      "movements": 16,
+      "group_id": 98,
+      "days_finish_process": 7014,
+      "time_distribuicao": 22,
+      "time_conclusao": 15,
+      "time_despacho": 12,
+      "time_julgamento": 8,
+      "time_decisao": 26,
+      "ranking": 10
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 88,
+    "fields": {
+      "vara_id": 88,
+      "name": "2ª VARA DA FAZENDA PÚBLICA - TJBA",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 53,
+      "movements": 8,
+      "group_id": 98,
+      "days_finish_process": 8574,
+      "time_distribuicao": 29,
+      "time_julgamento": 11,
+      "time_despacho": 16,
+      "ranking": 11
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 89,
+    "fields": {
+      "vara_id": 89,
+      "name": "2ª VARA DA FAZENDA PÚBLICA DA COMARCA DE CARUARU - TJPE",
+      "latitude": -8.28455,
+      "longitude": -35.9699,
+      "finished_processes": 56,
+      "movements": 27,
+      "group_id": 98,
+      "days_finish_process": 8778,
+      "time_distribuicao": 56,
+      "time_conclusao": 40,
+      "time_despacho": 37,
+      "time_julgamento": 56,
+      "ranking": 12
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 90,
+    "fields": {
+      "vara_id": 90,
+      "name": "10ª VARA FAZENDA PÚBLICA DE SÃO LUÍS - TJMA",
+      "latitude": -2.53874,
+      "longitude": -44.2825,
+      "finished_processes": 71,
+      "movements": 33,
+      "group_id": 98,
+      "days_finish_process": 3010,
+      "time_distribuicao": 26,
+      "time_conclusao": 59,
+      "time_despacho": 55,
+      "time_julgamento": 60,
+      "ranking": 5
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 91,
+    "fields": {
+      "vara_id": 91,
+      "name": "VARA DOS EXECUTIVOS FISCAIS MUNICIPAIS DA CAPITAL - TJPE",
+      "latitude": -8.046660000000001,
+      "longitude": -34.8771,
+      "finished_processes": 80,
+      "movements": 14,
+      "group_id": 98,
+      "days_finish_process": 3611,
+      "time_distribuicao": 79,
+      "time_conclusao": 75,
+      "time_despacho": 67,
+      "ranking": 8
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 92,
+    "fields": {
+      "vara_id": 92,
+      "name": "4A. VARA DE SANTA RITA - TJPB",
+      "latitude": null,
+      "longitude": null,
+      "finished_processes": 81,
+      "movements": 9,
+      "group_id": 98,
+      "days_finish_process": 150,
+      "time_distribuicao": 12,
+      "time_conclusao": 37,
+      "time_julgamento": 27,
+      "ranking": 1
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 93,
+    "fields": {
+      "vara_id": 93,
+      "name": "1ª VARA CÍVEL E EMPRESARIAL DE CASTANHAL - TJPA",
+      "latitude": -1.29797,
+      "longitude": -47.9167,
+      "finished_processes": 113,
+      "movements": 21,
+      "group_id": 98,
+      "days_finish_process": 2977,
+      "time_distribuicao": 113,
+      "time_conclusao": 113,
+      "time_despacho": 51,
+      "time_decisao": 15,
+      "time_julgamento": 59,
+      "ranking": 4
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 94,
+    "fields": {
+      "vara_id": 94,
+      "name": "1ª VARA DE SANTA INÊS - TJMA",
+      "latitude": -3.6511199999999997,
+      "longitude": -45.3774,
+      "finished_processes": 121,
+      "movements": 22,
+      "group_id": 98,
+      "days_finish_process": 2399,
+      "time_distribuicao": 12,
+      "time_conclusao": 45,
+      "time_despacho": 48,
+      "time_julgamento": 27,
+      "ranking": 3
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 95,
+    "fields": {
+      "vara_id": 95,
+      "name": "MARATAÍZES - VARA DE FAZ PUBLICA EST MUN REG PUBLICOS - TJES",
+      "latitude": -21.0398,
+      "longitude": -40.8384,
+      "finished_processes": 225,
+      "movements": 36,
+      "group_id": 98,
+      "days_finish_process": 4789,
+      "time_distribuicao": 140,
+      "time_conclusao": 88,
+      "time_decisao": 20,
+      "time_despacho": 73,
+      "time_julgamento": 203,
+      "ranking": 9
+    }
+  },
+  {
+    "model": "performance.Vara",
+    "pk": 96,
+    "fields": {
+      "vara_id": 96,
+      "name": "V DOS FEITOS DE REL DE CONS CIV E COMERCIAIS DE SANTA MARIA DA VITÓRIA - TJBA",
+      "latitude": -13.3859,
+      "longitude": -44.2011,
+      "finished_processes": 316,
+      "movements": 9,
+      "group_id": 98,
+      "days_finish_process": 3486,
+      "time_distribuicao": 260,
+      "time_despacho": 236,
+      "time_conclusao": 211,
+      "time_julgamento": 278,
+      "ranking": 7
+    }
+  }
+]
