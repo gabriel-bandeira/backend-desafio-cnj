@@ -1,4 +1,6 @@
-# Favor também consultar o README.md do git: https://github.com/lfvvercosa/desafio_cnj
+# Favor também consultar o README.md do git: 
+
+https://github.com/lfvvercosa/desafio_cnj
 
 # Python: Getting Started
 
