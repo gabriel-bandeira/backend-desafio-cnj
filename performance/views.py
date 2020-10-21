@@ -144,10 +144,10 @@ def best_varas_on_step(request):
             vara = VaraSerializer(vara_obj).data
             res_dict['vara_name'] = vara['name']
             # Get comment info
-            # comment_obj = Comments.objects.get(comment_id=step_dict['comment_id'])
-            # comment = CommentsSerializer(comment_obj).data
-            # res_dict['comment'] = comment['comment']
-            res_dict['comment'] = "Meu comentário fixo"
+            comment_obj = Comments.objects.get(comment_id=step_dict['comment_id'])
+            comment = CommentsSerializer(comment_obj).data
+            res_dict['comment'] = comment['comment']
+            # res_dict['comment'] = "Meu comentário fixo"
             res_steps.append(res_dict)
         return Response(res_steps, HTTP_200_OK)
     except Steps.DoesNotExist as e:
