@@ -3,7 +3,9 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import Group, Vara, StepConfiguration, Comments, Steps
 from .serializers import GroupSerializer, VaraSerializer, VaraDetailsSerializer, VaraListSerializer,\
     StepConfigurationSerializer, CommentsSerializer, StepsSerializer
-from .utils import create_graph_dict
+from .utils import create_graph_dict, best_varas_on_step_aux, \
+    find_ranking
+
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, \
                                       permission_classes
@@ -11,6 +13,7 @@ from rest_framework.status import HTTP_400_BAD_REQUEST, \
                                   HTTP_404_NOT_FOUND, \
                                   HTTP_200_OK
 from rest_framework.permissions import AllowAny
+
 
 
 # Home
@@ -27,10 +30,23 @@ def __get_best_steps__(vara_id:int, amount_of_steps:int =10):
     res_steps = []
     for step in step_objects.all():
         step_dict = StepsSerializer(step).data
+
+        my_res_steps = best_varas_on_step_aux(step_dict['step_id'], 
+                                           vara_id, 
+                                           amount_of_varas=60)
+
+                            
+        ranking = find_ranking(my_res_steps, vara_id)
+
+        # print('### res_steps: ', str(res_steps))
+        # print('ranking: ', str(ranking))
+        # print('vara_id: ', str(vara_id))
+
         res_dict = {
             'step_id': step_dict['step_id'],
             'med_time': step_dict['med_time'],
-            'frequency': step_dict['frequency']
+            'frequency': step_dict['frequency'],
+            'ranking': ranking
         }
         # Get step info
         step_config_obj = StepConfiguration.objects.get(step_id=res_dict['step_id'])
@@ -46,10 +62,18 @@ def __get_worst_steps__(vara_id:int, amount_of_steps:int = 10):
     res_steps = []
     for step in step_objects.all():
         step_dict = StepsSerializer(step).data
+
+        my_res_steps = best_varas_on_step_aux(step_dict['step_id'], 
+                                              vara_id, 
+                                              amount_of_varas=60)
+
+        ranking = find_ranking(my_res_steps, vara_id)
+
         res_dict = {
             'step_id': step_dict['step_id'],
             'med_time': step_dict['med_time'],
-            'frequency': step_dict['frequency']
+            'frequency': step_dict['frequency'],
+            'ranking': ranking
         }
         # Get step info
         step_config_obj = StepConfiguration.objects.get(step_id=res_dict['step_id'])
@@ -109,46 +133,8 @@ def best_varas_on_step(request):
 
         amount_of_varas = int(request.GET.get('amount_of_varas', 10))
 
-        my_vara = Vara.objects.get(vara_id=vara_id)
-        my_vara_group = my_vara.group_id
-        varas_in_group = Vara.objects.filter(group_id=my_vara_group)
-
-        # print('varas_list: ', str(varas_list))
-
-        all_step_objects = Steps.objects.\
-            filter(step_id=step_id, vara_id__in=varas_in_group).\
-                order_by('med_time')
-
-        # print('all_step_objects: ', str(all_step_objects))
-
-        first_objs = all_step_objects[:max(amount_of_varas - 5, 1)]
-        focused_vara_index = list(all_step_objects.all()).index(Steps.objects.get(step_id=step_id,vara_id=vara_id))
-        min_index_to_get = max(0, focused_vara_index-2)
-        max_index_to_get = focused_vara_index + 3
-        last_objs = all_step_objects[min_index_to_get:max_index_to_get]
-        objs = first_objs.union(last_objs).distinct()
-        if amount_of_varas > len(objs):
-            objs = objs.union(all_step_objects[:amount_of_varas]).distinct()
-
-        objs = objs.order_by('med_time')
-
-        res_steps = []
-        for step in objs.all():
-            step_dict = StepsSerializer(step).data
-            res_dict = {
-                'vara_id': step_dict['vara_id'],
-                'med_time': step_dict['med_time']
-            }
-            # Get vara info
-            vara_obj = Vara.objects.get(vara_id=res_dict['vara_id'])
-            vara = VaraSerializer(vara_obj).data
-            res_dict['vara_name'] = vara['name']
-            # Get comment info
-            comment_obj = Comments.objects.get(comment_id=step_dict['comment_id'])
-            comment = CommentsSerializer(comment_obj).data
-            res_dict['comment'] = comment['comment']
-            # res_dict['comment'] = "Meu comentário fixo"
-            res_steps.append(res_dict)
+        res_steps = best_varas_on_step_aux(step_id, vara_id, amount_of_varas)
+        
         return Response(res_steps, HTTP_200_OK)
     except Steps.DoesNotExist as e:
         return Response('Error getting steps. ' + str(e), HTTP_404_NOT_FOUND)
