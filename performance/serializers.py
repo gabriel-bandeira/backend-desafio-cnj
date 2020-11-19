@@ -43,6 +43,9 @@ class VaraSerializer(serializers.ModelSerializer):
                   'time_julgamento',
                   'time_transito_em_julgado',
                   'time_baixa_ou_arquivamento',
+                  'time_audiencia',
+                  'time_citacao',
+                  'time_outros',
                   'days_finish_process',
                   'latitude',
                   'longitude']
