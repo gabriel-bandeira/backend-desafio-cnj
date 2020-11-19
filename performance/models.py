@@ -15,6 +15,9 @@ class Group(models.Model):
 
     amount_of_varas = models.IntegerField(default=None)
 
+    frequent_subjects = models.JSONField(null=True)
+    frequent_classes = models.JSONField(null=True)
+
 
 class Vara(models.Model):
     vara_id = models.BigIntegerField(primary_key=True)
@@ -26,13 +29,16 @@ class Vara(models.Model):
 
     group_id = models.ForeignKey(Group, on_delete=models.CASCADE)
 
-    time_distribuicao = models.IntegerField(default=None, null=True)
-    time_conclusao = models.IntegerField(default=None, null=True)
-    time_despacho = models.IntegerField(default=None, null=True)
-    time_decisao = models.IntegerField(default=None, null=True)
-    time_julgamento = models.IntegerField(default=None, null=True)
-    time_transito_em_julgado = models.IntegerField(default=None, null=True)
-    time_baixa_ou_arquivamento = models.IntegerField(default=None, null=True)
+    time_distribuicao = models.FloatField(default=None, null=True)
+    time_conclusao = models.FloatField(default=None, null=True)
+    time_despacho = models.FloatField(default=None, null=True)
+    time_decisao = models.FloatField(default=None, null=True)
+    time_julgamento = models.FloatField(default=None, null=True)
+    time_transito_em_julgado = models.FloatField(default=None, null=True)
+    time_baixa_ou_arquivamento = models.FloatField(default=None, null=True)
+    time_audiencia = models.FloatField(default=None, null=True)
+    time_citacao = models.FloatField(default=None, null=True)
+    time_outros = models.FloatField(default=None, null=True)
 
     days_finish_process = models.IntegerField(default=None)
 
