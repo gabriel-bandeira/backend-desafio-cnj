@@ -26,4 +26,8 @@ urlpatterns = [
     path('api/v1/varas/<int:vara_id>/compareGraphWith/'+\
          '<int:other_vara_id>/<int:is_time>/', 
         views.graphs),
+
+    # Grupos
+    path('api/v1/grupos/', views.grupos_list),
+    path('api/v1/grupos/<int:grupo_id>/', views.grupo_details),
 ]
