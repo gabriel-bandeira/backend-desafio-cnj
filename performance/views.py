@@ -265,106 +265,115 @@ def graphs(request, vara_id, other_vara_id, is_time):
 @api_view(["GET"])
 @permission_classes((AllowAny,))
 def grupos_list(request):
-    fake_data = \
-        [
-            {
-                "identificador": 20,
-                "total_varas": 51,
-                "varas_em_alerta": 2,
-                "assuntos_frequentes": [
-                    {
-                        "assunto": "Direito Civil",
-                        "frequencia": 22.3
-                    },
-                    {
-                        "assunto": "Direito da Saúde",
-                        "frequencia": 31.3
-                    },
-                    {
-                        "assunto": "Direito Penal",
-                        "frequencia": 17.1
-                    },
+    try:
+        # filtros opicionais
+        justica = request.GET.get('justica', None)
+        grau = request.GET.get('grau', None)
+        classe_processual = request.GET.get('classe_processual', None)
+        fake_data = \
+            [
+                {
+                    "identificador": 20,
+                    "total_varas": 51,
+                    "varas_em_alerta": 2,
+                    "assuntos_frequentes": [
+                        {
+                            "assunto": "Direito Civil",
+                            "frequencia": 22.3
+                        },
+                        {
+                            "assunto": "Direito da Saúde",
+                            "frequencia": 31.3
+                        },
+                        {
+                            "assunto": "Direito Penal",
+                            "frequencia": 17.1
+                        },
 
-                ],
-                "classes_frequentes": [
-                    {
-                        "classe": "Processo Cível e do Trabalho",
-                        "frequencia": 35.9
-                    },
-                    {
-                        "classe": "Processo Criminal",
-                        "frequencia": 15.5
-                    },
-                    {
-                        "classe": "Processo Eleitoral",
-                        "frequencia": 10.7
-                    },
-                ],
-                "varas": [
-                    {
-                        "nome": "Vara Única de Anajás",
-                        "tempo": 1207,
-                        "latitude": -8.12094,
-                        "longitude": -34.73094
-                    },
-                    {
-                        "nome": "1ª Vara TJBA",
-                        "tempo": 956,
-                        "latitude": -8.12094,
-                        "longitude": -34.93094
-                    },
-                    {
-                        "nome": "1ª Vara TJAC",
-                        "tempo": 843,
-                        "latitude": -9.12094,
-                        "longitude": -35.23094
-                    },
-                ]
-            },
-            {
-                "identificador": 21,
-                "total_varas": 15,
-                "varas_em_alerta": 0,
-                "assuntos_frequentes": [
-                    {
-                        "assunto": "Direito Assistencial",
-                        "frequencia": 12.3
-                    },
-                    {
-                        "assunto": "Direito Eleitoral",
-                        "frequencia": 41.3
-                    },
+                    ],
+                    "classes_frequentes": [
+                        {
+                            "classe": "Processo Cível e do Trabalho",
+                            "frequencia": 35.9
+                        },
+                        {
+                            "classe": "Processo Criminal",
+                            "frequencia": 15.5
+                        },
+                        {
+                            "classe": "Processo Eleitoral",
+                            "frequencia": 10.7
+                        },
+                    ],
+                    "varas": [
+                        {
+                            "nome": "Vara Única de Anajás",
+                            "tempo": 1207,
+                            "latitude": -8.12094,
+                            "longitude": -34.73094
+                        },
+                        {
+                            "nome": "1ª Vara TJBA",
+                            "tempo": 956,
+                            "latitude": -8.12094,
+                            "longitude": -34.93094
+                        },
+                        {
+                            "nome": "1ª Vara TJAC",
+                            "tempo": 843,
+                            "latitude": -9.12094,
+                            "longitude": -35.23094
+                        },
+                    ]
+                },
+                {
+                    "identificador": 21,
+                    "total_varas": 15,
+                    "varas_em_alerta": 0,
+                    "assuntos_frequentes": [
+                        {
+                            "assunto": "Direito Assistencial",
+                            "frequencia": 12.3
+                        },
+                        {
+                            "assunto": "Direito Eleitoral",
+                            "frequencia": 41.3
+                        },
 
-                ],
-                "classes_frequentes": [
-                    {
-                        "classe": "Processo Eleitoral",
-                        "frequencia": 65.9
-                    }
-                ],
-                "varas": [
-                    {
-                        "nome": "Vara Única de Anajás",
-                        "tempo": 654,
-                        "latitude": -8.12094,
-                        "longitude": -34.73094
-                    },
-                    {
-                        "nome": "1ª Vara TJPA",
-                        "tempo": 2300,
-                        "latitude": -8.12094,
-                        "longitude": -34.93094
-                    },
-                    {
-                        "nome": "1ª Vara TJRN",
-                        "tempo": 1980,
-                        "latitude": -9.12094,
-                        "longitude": -35.23094
-                    },
-                ]
-            }
-        ]
-    return Response(fake_data, HTTP_200_OK)
+                    ],
+                    "classes_frequentes": [
+                        {
+                            "classe": "Processo Eleitoral",
+                            "frequencia": 65.9
+                        }
+                    ],
+                    "varas": [
+                        {
+                            "nome": "Vara Única de Anajás",
+                            "tempo": 654,
+                            "latitude": -8.12094,
+                            "longitude": -34.73094
+                        },
+                        {
+                            "nome": "1ª Vara TJPA",
+                            "tempo": 2300,
+                            "latitude": -8.12094,
+                            "longitude": -34.93094
+                        },
+                        {
+                            "nome": "1ª Vara TJRN",
+                            "tempo": 1980,
+                            "latitude": -9.12094,
+                            "longitude": -35.23094
+                        },
+                    ]
+                }
+            ]
+        return Response(fake_data, HTTP_200_OK)
+    except Group.DoesNotExist as e:
+        return Response('Error getting grupo. ' + str(e), HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response(str(e), HTTP_400_BAD_REQUEST)
 
 
 # Grupos
@@ -372,275 +381,281 @@ def grupos_list(request):
 @api_view(["GET"])
 @permission_classes((AllowAny,))
 def grupo_details(request, grupo_id):
-    fake_data = \
-        {
-            "identificador": 20,
-            "numero_varas": 56,
-            "tempo_medio": 1100,
-            "tempoOutrasVaras": {
-                "nome": "Outras Unidades Judiciárias",
-                "tempo": 890
-            },
-            "varasEmAlerta": [
-                {
-                "identificador": 60,
-                "nome": "2ª de TJAC",
-                "tempo": 1544,
+    try:
+        fake_data = \
+            {
+                "identificador": 20,
+                "numero_varas": 56,
+                "tempo_medio": 1100,
+                "tempoOutrasVaras": {
+                    "nome": "Outras Unidades Judiciárias",
+                    "tempo": 890
                 },
-                {
-                "identificador": 60,
-                "nome": "3ª de TJAC",
-                "tempo": 1607,
-                },
-                {
-                "identificador": 60,
-                "nome": "4ª de TJBA",
-                "tempo": 1699,
-                },
-            ],
-            "melhoresVaras": [
-                {
-                    "identificador": 57,
-                    "ranking": 1,
-                    "nome": "Única de Roraima",
-                    "tempo": 690,
-                    "movimentos": 32,
-                    "processos": 67,
-                    "melhorEtapa": "Distribuição",
-                    "piorEtapa": "Julgamento",
-                    "porcentagemMacroetapas": [
-                        {
-                            "time_distribuicao": 3.5,
-                            "time_conclusao": 0.09,
-                            "time_despacho": 49.35,
-                            "time_decisao": 36.28,
-                            "time_julgamento": 9.9,
-                            "time_transito_em_julgado": 0,
-                            "time_baixa_ou_arquivamento": 22.47,
-                            "time_citacao": 0,
-                            "time_audiencia": 0,
-                            "time_outros": 0
-                        }
-                    ]
-                },
-                {
-                    "identificador": 44,
-                    "ranking": 2,
-                    "nome": "1ª Vara de TJAL",
-                    "tempo": 740,
-                    "movimentos": 36,
-                    "processos": 67,
-                    "melhorEtapa": "Baixa/Arquivamento",
-                    "piorEtapa": "Trânsito em julgado",
-                    "porcentagemMacroetapas": [
-                        {
-                            "time_distribuicao": -1,
-                            "time_conclusao": 5.13,
-                            "time_despacho": 54.61,
-                            "time_decisao": -1,
-                            "time_julgamento": 17.4,
-                            "time_transito_em_julgado": -1,
-                            "time_baixa_ou_arquivamento": 22.47,
-                            "time_audiencia": -1,
-                            "time_citacao": -1,
-                            "time_outros": 0.39,
-                        }
-                    ]
-                },
-                {
-                    "identificador": 33,
-                    "ranking": 3,
-                    "nome": "2ª Vara TJPB",
-                    "tempo": 790,
-                    "movimentos": 32,
-                    "processos": 67,
-                    "melhorEtapa": "Distribuição",
-                    "piorEtapa": "Julgamento",
-                    "porcentagemMacroetapas": [
-                        {
-                            "time_distribuicao": -1,
-                            "time_conclusao": 5.59,
-                            "time_despacho": -1,
-                            "time_decisao": 35.72,
-                            "time_julgamento": 12.48,
-                            "time_transito_em_julgado": 28.87,
-                            "time_baixa_ou_arquivamento": -1,
-                            "time_audiencia": -1,
-                            "time_citacao": -1,
-                            "time_outros": 17.34,
-                        }
-                    ]
-                },
-                {
-                    "identificador": 34,
-                    "ranking": 4,
-                    "nome": "3ª Vara TJPB",
-                    "tempo": 804,
-                    "movimentos": 22,
-                    "processos": 37,
-                    "melhorEtapa": "Distribuição",
-                    "piorEtapa": "Julgamento",
-                    "porcentagemMacroetapas": [
-                        {
-                            "time_distribuicao": 0.04,
-                            "time_conclusao": 0.21,
-                            "time_despacho": 30.33,
-                            "time_decisao": 60.3,
-                            "time_julgamento": 9.11,
-                            "time_transito_em_julgado": -1,
-                            "time_baixa_ou_arquivamento": -1,
-                            "time_audiencia": -1,
-                            "time_citacao": -1,
-                            "time_outros": -1,
-                        }
-                    ]
-                },
-                {
-                    "identificador": 22,
-                    "ranking": 5,
-                    "nome": "4ª Vara TJPB",
-                    "tempo": 890,
-                    "movimentos": 32,
-                    "processos": 67,
-                    "melhorEtapa": "Distribuição",
-                    "piorEtapa": "Julgamento",
-                    "porcentagemMacroetapas": [
-                        {
-                            "time_distribuicao": 28.47,
-                            "time_conclusao": 38.43,
-                            "time_despacho": 18.26,
-                            "time_decisao": -1,
-                            "time_julgamento": 14.85,
-                            "time_transito_em_julgado": -1,
-                            "time_baixa_ou_arquivamento": -1,
-                            "time_audiencia": -1,
-                            "time_citacao": -1,
-                            "time_outros": -1,
-                        }
-                    ]
-                },
-            ],
-            "pioresVaras": [
-                {
-                    "identificador": 53,
-                    "ranking": 52,
-                    "nome": "1ª de TJRO",
-                    "tempo": 1207,
-                    "movimentos": 43,
-                    "processos": 47,
-                    "melhorEtapa": "Despacho",
-                    "piorEtapa": "Audiência",
-                    "porcentagemMacroetapas": [
-                        {
-                            "time_distribuicao": -1,
-                            "time_conclusao": 12.35,
-                            "time_despacho": 23.99,
-                            "time_decisao": -1,
-                            "time_julgamento": 32.78,
-                            "time_transito_em_julgado": 30.88,
-                            "time_baixa_ou_arquivamento": -1,
-                            "time_audiencia": -1,
-                            "time_citacao": -1,
-                            "time_outros": -1,
-                        }
-                    ]
-                },
-                {
-                    "identificador": 54,
-                    "ranking": 53,
-                    "nome": "1ª de TJAC",
-                    "tempo": 1307,
-                    "movimentos": 43,
-                    "processos": 47,
-                    "melhorEtapa": "Conclusão",
-                    "piorEtapa": "Audiência",
-                    "porcentagemMacroetapas": [
-                        {
-                            "time_distribuicao": -1,
-                            "time_conclusao": 0.71,
-                            "time_despacho": -1,
-                            "time_decisao": 28.83,
-                            "time_julgamento": 29.36,
-                            "time_transito_em_julgado": 20.82,
-                            "time_baixa_ou_arquivamento": -1,
-                            "time_audiencia": -1,
-                            "time_citacao": -1,
-                            "time_outros": 20.28,
-                        }
-                    ]
-                },
-                {
-                    "identificador": 53,
-                    "ranking": 54,
+                "varasEmAlerta": [
+                    {
+                    "identificador": 60,
                     "nome": "2ª de TJAC",
                     "tempo": 1544,
-                    "movimentos": 43,
-                    "processos": 47,
-                    "melhorEtapa": "Conclusão",
-                    "piorEtapa": "Despacho",
-                    "porcentagemMacroetapas": [
-                        {
-                            "time_distribuicao": 3.5,
-                            "time_conclusao": 0.09,
-                            "time_despacho": 49.35,
-                            "time_decisao": 36.28,
-                            "time_julgamento": 9.9,
-                            "time_transito_em_julgado": 0,
-                            "time_baixa_ou_arquivamento": 22.47,
-                            "time_citacao": 0,
-                            "time_audiencia": 0,
-                            "time_outros": 0
-                        }
-                    ]
-                },
-                {
-                    "identificador": 50,
-                    "ranking": 55,
+                    },
+                    {
+                    "identificador": 60,
                     "nome": "3ª de TJAC",
                     "tempo": 1607,
-                    "movimentos": 43,
-                    "processos": 47,
-                    "melhorEtapa": "Despacho",
-                    "piorEtapa": "Audiência",
-                    "porcentagemMacroetapas": [
-                        {
-                            "time_distribuicao": 27.75,
-                            "time_conclusao": 44.7,
-                            "time_despacho": 14.19,
-                            "time_decisao": -1,
-                            "time_julgamento": 13.36,
-                            "time_transito_em_julgado": -1,
-                            "time_baixa_ou_arquivamento": -1,
-                            "time_audiencia": -1,
-                            "time_citacao": -1,
-                            "time_outros": -1,
-                        }
-                    ]
-                },
-                {
-                    "identificador": 49,
-                    "ranking": 56,
+                    },
+                    {
+                    "identificador": 60,
                     "nome": "4ª de TJBA",
                     "tempo": 1699,
-                    "movimentos": 43,
-                    "processos": 47,
-                    "melhorEtapa": "Conclusão",
-                    "piorEtapa": "Audiência",
-                    "porcentagemMacroetapas": [
-                        {
-                            "time_distribuicao": -1,
-                            "time_conclusao": 25.43,
-                            "time_despacho": -1,
-                            "time_decisao": -1,
-                            "time_julgamento": 41.36,
-                            "time_transito_em_julgado": -1,
-                            "time_baixa_ou_arquivamento": -1,
-                            "time_audiencia": -1,
-                            "time_citacao": -1,
-                            "time_outros": 33.21,
-                        }
-                    ]
-                },
-            ]
-        }
-    return Response(fake_data, HTTP_200_OK)
+                    },
+                ],
+                "melhoresVaras": [
+                    {
+                        "identificador": 57,
+                        "ranking": 1,
+                        "nome": "Única de Roraima",
+                        "tempo": 690,
+                        "movimentos": 32,
+                        "processos": 67,
+                        "melhorEtapa": "Distribuição",
+                        "piorEtapa": "Julgamento",
+                        "porcentagemMacroetapas": [
+                            {
+                                "time_distribuicao": 3.5,
+                                "time_conclusao": 0.09,
+                                "time_despacho": 49.35,
+                                "time_decisao": 36.28,
+                                "time_julgamento": 9.9,
+                                "time_transito_em_julgado": 0,
+                                "time_baixa_ou_arquivamento": 22.47,
+                                "time_citacao": 0,
+                                "time_audiencia": 0,
+                                "time_outros": 0
+                            }
+                        ]
+                    },
+                    {
+                        "identificador": 44,
+                        "ranking": 2,
+                        "nome": "1ª Vara de TJAL",
+                        "tempo": 740,
+                        "movimentos": 36,
+                        "processos": 67,
+                        "melhorEtapa": "Baixa/Arquivamento",
+                        "piorEtapa": "Trânsito em julgado",
+                        "porcentagemMacroetapas": [
+                            {
+                                "time_distribuicao": -1,
+                                "time_conclusao": 5.13,
+                                "time_despacho": 54.61,
+                                "time_decisao": -1,
+                                "time_julgamento": 17.4,
+                                "time_transito_em_julgado": -1,
+                                "time_baixa_ou_arquivamento": 22.47,
+                                "time_audiencia": -1,
+                                "time_citacao": -1,
+                                "time_outros": 0.39,
+                            }
+                        ]
+                    },
+                    {
+                        "identificador": 33,
+                        "ranking": 3,
+                        "nome": "2ª Vara TJPB",
+                        "tempo": 790,
+                        "movimentos": 32,
+                        "processos": 67,
+                        "melhorEtapa": "Distribuição",
+                        "piorEtapa": "Julgamento",
+                        "porcentagemMacroetapas": [
+                            {
+                                "time_distribuicao": -1,
+                                "time_conclusao": 5.59,
+                                "time_despacho": -1,
+                                "time_decisao": 35.72,
+                                "time_julgamento": 12.48,
+                                "time_transito_em_julgado": 28.87,
+                                "time_baixa_ou_arquivamento": -1,
+                                "time_audiencia": -1,
+                                "time_citacao": -1,
+                                "time_outros": 17.34,
+                            }
+                        ]
+                    },
+                    {
+                        "identificador": 34,
+                        "ranking": 4,
+                        "nome": "3ª Vara TJPB",
+                        "tempo": 804,
+                        "movimentos": 22,
+                        "processos": 37,
+                        "melhorEtapa": "Distribuição",
+                        "piorEtapa": "Julgamento",
+                        "porcentagemMacroetapas": [
+                            {
+                                "time_distribuicao": 0.04,
+                                "time_conclusao": 0.21,
+                                "time_despacho": 30.33,
+                                "time_decisao": 60.3,
+                                "time_julgamento": 9.11,
+                                "time_transito_em_julgado": -1,
+                                "time_baixa_ou_arquivamento": -1,
+                                "time_audiencia": -1,
+                                "time_citacao": -1,
+                                "time_outros": -1,
+                            }
+                        ]
+                    },
+                    {
+                        "identificador": 22,
+                        "ranking": 5,
+                        "nome": "4ª Vara TJPB",
+                        "tempo": 890,
+                        "movimentos": 32,
+                        "processos": 67,
+                        "melhorEtapa": "Distribuição",
+                        "piorEtapa": "Julgamento",
+                        "porcentagemMacroetapas": [
+                            {
+                                "time_distribuicao": 28.47,
+                                "time_conclusao": 38.43,
+                                "time_despacho": 18.26,
+                                "time_decisao": -1,
+                                "time_julgamento": 14.85,
+                                "time_transito_em_julgado": -1,
+                                "time_baixa_ou_arquivamento": -1,
+                                "time_audiencia": -1,
+                                "time_citacao": -1,
+                                "time_outros": -1,
+                            }
+                        ]
+                    },
+                ],
+                "pioresVaras": [
+                    {
+                        "identificador": 53,
+                        "ranking": 52,
+                        "nome": "1ª de TJRO",
+                        "tempo": 1207,
+                        "movimentos": 43,
+                        "processos": 47,
+                        "melhorEtapa": "Despacho",
+                        "piorEtapa": "Audiência",
+                        "porcentagemMacroetapas": [
+                            {
+                                "time_distribuicao": -1,
+                                "time_conclusao": 12.35,
+                                "time_despacho": 23.99,
+                                "time_decisao": -1,
+                                "time_julgamento": 32.78,
+                                "time_transito_em_julgado": 30.88,
+                                "time_baixa_ou_arquivamento": -1,
+                                "time_audiencia": -1,
+                                "time_citacao": -1,
+                                "time_outros": -1,
+                            }
+                        ]
+                    },
+                    {
+                        "identificador": 54,
+                        "ranking": 53,
+                        "nome": "1ª de TJAC",
+                        "tempo": 1307,
+                        "movimentos": 43,
+                        "processos": 47,
+                        "melhorEtapa": "Conclusão",
+                        "piorEtapa": "Audiência",
+                        "porcentagemMacroetapas": [
+                            {
+                                "time_distribuicao": -1,
+                                "time_conclusao": 0.71,
+                                "time_despacho": -1,
+                                "time_decisao": 28.83,
+                                "time_julgamento": 29.36,
+                                "time_transito_em_julgado": 20.82,
+                                "time_baixa_ou_arquivamento": -1,
+                                "time_audiencia": -1,
+                                "time_citacao": -1,
+                                "time_outros": 20.28,
+                            }
+                        ]
+                    },
+                    {
+                        "identificador": 53,
+                        "ranking": 54,
+                        "nome": "2ª de TJAC",
+                        "tempo": 1544,
+                        "movimentos": 43,
+                        "processos": 47,
+                        "melhorEtapa": "Conclusão",
+                        "piorEtapa": "Despacho",
+                        "porcentagemMacroetapas": [
+                            {
+                                "time_distribuicao": 3.5,
+                                "time_conclusao": 0.09,
+                                "time_despacho": 49.35,
+                                "time_decisao": 36.28,
+                                "time_julgamento": 9.9,
+                                "time_transito_em_julgado": 0,
+                                "time_baixa_ou_arquivamento": 22.47,
+                                "time_citacao": 0,
+                                "time_audiencia": 0,
+                                "time_outros": 0
+                            }
+                        ]
+                    },
+                    {
+                        "identificador": 50,
+                        "ranking": 55,
+                        "nome": "3ª de TJAC",
+                        "tempo": 1607,
+                        "movimentos": 43,
+                        "processos": 47,
+                        "melhorEtapa": "Despacho",
+                        "piorEtapa": "Audiência",
+                        "porcentagemMacroetapas": [
+                            {
+                                "time_distribuicao": 27.75,
+                                "time_conclusao": 44.7,
+                                "time_despacho": 14.19,
+                                "time_decisao": -1,
+                                "time_julgamento": 13.36,
+                                "time_transito_em_julgado": -1,
+                                "time_baixa_ou_arquivamento": -1,
+                                "time_audiencia": -1,
+                                "time_citacao": -1,
+                                "time_outros": -1,
+                            }
+                        ]
+                    },
+                    {
+                        "identificador": 49,
+                        "ranking": 56,
+                        "nome": "4ª de TJBA",
+                        "tempo": 1699,
+                        "movimentos": 43,
+                        "processos": 47,
+                        "melhorEtapa": "Conclusão",
+                        "piorEtapa": "Audiência",
+                        "porcentagemMacroetapas": [
+                            {
+                                "time_distribuicao": -1,
+                                "time_conclusao": 25.43,
+                                "time_despacho": -1,
+                                "time_decisao": -1,
+                                "time_julgamento": 41.36,
+                                "time_transito_em_julgado": -1,
+                                "time_baixa_ou_arquivamento": -1,
+                                "time_audiencia": -1,
+                                "time_citacao": -1,
+                                "time_outros": 33.21,
+                            }
+                        ]
+                    },
+                ]
+            }
+        return Response(fake_data, HTTP_200_OK)
+    except Group.DoesNotExist as e:
+        return Response('Error getting grupo. ' + str(e), HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response(str(e), HTTP_400_BAD_REQUEST)
+
