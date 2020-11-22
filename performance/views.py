@@ -291,6 +291,7 @@ def grupos_list(request):
 @permission_classes((AllowAny,))
 def grupo_details(request, group_id):
     try:
+        varas = ""
         # get list of groups and insert selected filters
         group_obj = Group.objects.get(group_id=group_id)
 
@@ -300,8 +301,12 @@ def grupo_details(request, group_id):
         # add calculated info
         group.update({'tempo_medio': __get_group_med_time__(group['group_id'])})
         # group.update({'tempoOutrasVaras': __get_group_ujs_over_med_time__(group['group_id'])})
-        group.update({'varas': __get_best_ujs__(group_id=group['group_id'], amount_of_varas=-1)})
-        group.update({'varasEmAlerta': find_outliers_group(group['group_id'])})
+        varas = __get_best_ujs__(group_id=group['group_id'], amount_of_varas=-1)
+        group.update({'varas': varas})
+        
+        outliers_list = find_outliers_group(group['group_id'])
+        varas_em_alerta = [v for v in varas if v['vara_id'] in outliers_list]
+        group.update({'varasEmAlerta': varas_em_alerta})
 
         # rename columns
         group['identificador'] = group.pop("group_id")
