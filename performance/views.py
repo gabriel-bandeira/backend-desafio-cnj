@@ -228,7 +228,7 @@ def grupos_list(request):
             group = GroupListSerializer(group_obj).data
 
             # add calculated info
-            # group.update({'varas': __get_best_ujs__(group_id=group['group_id'], amount_of_varas=-1)})
+            group.update({'varas': __get_best_ujs__(group_id=group['group_id'], amount_of_varas=-1)})
             group.update({'varas_em_alerta': __get_amount_alerted_ujs__(group['group_id'])})
 
             # rename columns
@@ -261,7 +261,7 @@ def grupo_details(request, group_id):
         # add calculated info
         group.update({'tempo_medio': __get_group_med_time__(group['group_id'])})
         # group.update({'tempoOutrasVaras': __get_group_ujs_over_med_time__(group['group_id'])})
-        group.update({'varas': __get_best_ujs__(group_id=group['group_id'], amount_of_varas=-1)})
+        # group.update({'varas': __get_best_ujs__(group_id=group['group_id'], amount_of_varas=-1)})
         group.update({'varasEmAlerta': find_outliers_group(group['group_id'])})
 
         # rename columns
