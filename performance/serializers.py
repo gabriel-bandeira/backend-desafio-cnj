@@ -31,6 +31,7 @@ class VaraDetailsSerializer(serializers.ModelSerializer):
                   'days_finish_process',
                   'group_id']
 
+# adicionar tribunal
 class VaraSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vara
@@ -70,3 +71,12 @@ class StepsSerializer(serializers.ModelSerializer):
                 'max_time',
                 'frequency',
                 'comment_id']
+
+class GroupListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Group
+        fields = ['group_id',
+                  'amount_of_varas',
+                  'frequent_subjects',
+                  'frequent_classes']
+

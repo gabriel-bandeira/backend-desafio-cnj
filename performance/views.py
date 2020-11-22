@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from .models import Group, Vara, StepConfiguration, Comments, Steps
-from .serializers import GroupSerializer, VaraSerializer, VaraDetailsSerializer, VaraListSerializer,\
-    StepConfigurationSerializer, CommentsSerializer, StepsSerializer
+from .serializers import GroupSerializer, GroupListSerializer, VaraSerializer, VaraDetailsSerializer, \
+    VaraListSerializer, StepConfigurationSerializer, CommentsSerializer, StepsSerializer
 from .utils import create_graph_dict, best_varas_on_step_aux, \
     find_ranking
 
@@ -25,17 +25,16 @@ def home(request):
 
 
 # Support functions
-def __get_best_steps__(vara_id:int, amount_of_steps:int =10):
+def __get_best_steps__(vara_id: int, amount_of_steps: int = 10):
     step_objects = Steps.objects.filter(vara_id=vara_id).order_by('med_time')[:amount_of_steps]
     res_steps = []
     for step in step_objects.all():
         step_dict = StepsSerializer(step).data
 
-        my_res_steps = best_varas_on_step_aux(step_dict['step_id'], 
-                                           vara_id, 
-                                           amount_of_varas=60)
+        my_res_steps = best_varas_on_step_aux(step_dict['step_id'],
+                                              vara_id,
+                                              amount_of_varas=60)
 
-                            
         ranking = find_ranking(my_res_steps, vara_id)
 
         # print('### res_steps: ', str(res_steps))
@@ -57,14 +56,14 @@ def __get_best_steps__(vara_id:int, amount_of_steps:int =10):
     return res_steps
 
 
-def __get_worst_steps__(vara_id:int, amount_of_steps:int = 10):
+def __get_worst_steps__(vara_id: int, amount_of_steps: int = 10):
     step_objects = Steps.objects.filter(vara_id=vara_id).order_by('-med_time')[:amount_of_steps]
     res_steps = []
     for step in step_objects.all():
         step_dict = StepsSerializer(step).data
 
-        my_res_steps = best_varas_on_step_aux(step_dict['step_id'], 
-                                              vara_id, 
+        my_res_steps = best_varas_on_step_aux(step_dict['step_id'],
+                                              vara_id,
                                               amount_of_varas=60)
 
         ranking = find_ranking(my_res_steps, vara_id)
@@ -82,6 +81,95 @@ def __get_worst_steps__(vara_id:int, amount_of_steps:int = 10):
         res_dict['destination'] = step_config['destination']
         res_steps.append(res_dict)
     return res_steps
+
+
+def __get_best_ujs__(group_id: int, amount_of_varas: int) -> list:
+    all_uj_obj_list = Vara.objects.filter(group_id=group_id).order_by('days_finish_process')
+    if amount_of_varas > 0:
+        all_uj_obj_list = all_uj_obj_list[:amount_of_varas]
+    all_uj_obj_list = all_uj_obj_list.order_by('days_finish_process')
+
+    res_list = []
+    for uj_obj in all_uj_obj_list.all():
+        uj = VaraSerializer(uj_obj).data
+        res_list.append(uj)
+    return res_list
+
+
+def __get_worst_ujs__(group_id: int, amount_of_varas: int) -> list:
+    all_uj_obj_list = Vara.objects.filter(group_id=group_id).order_by('days_finish_process')
+    if amount_of_varas > 0:
+        all_uj_obj_list = all_uj_obj_list[-amount_of_varas:]
+    all_uj_obj_list = all_uj_obj_list.order_by('days_finish_process')
+
+    res_list = []
+    for uj_obj in all_uj_obj_list.all():
+        uj = VaraSerializer(uj_obj).data
+        res_list.append(uj)
+    return res_list
+
+
+def __get_frequent_subjects__(group_id: int) -> list:
+    if group_id == 98:
+        return [
+            {
+                "assunto": "Direito Civil",
+                "frequencia": 22.3
+            },
+            {
+                "assunto": "Direito da Saúde",
+                "frequencia": 31.3
+            },
+            {
+                "assunto": "Direito Penal",
+                "frequencia": 17.1
+            }
+
+        ]
+    else:
+        return [
+            {
+                "assunto": "Direito Assistencial",
+                "frequencia": 12.3
+            },
+            {
+                "assunto": "Direito Eleitoral",
+                "frequencia": 41.3
+            }
+
+        ]
+
+
+def __get_frequent_classes__(group_id: int) -> list:
+    if group_id == 98:
+        return [
+            {
+                "classe": "Processo Cível e do Trabalho",
+                "frequencia": 35.9
+            },
+            {
+                "classe": "Processo Criminal",
+                "frequencia": 15.5
+            },
+            {
+                "classe": "Processo Eleitoral",
+                "frequencia": 10.7
+            }
+        ]
+    else:
+        return [
+            {
+                "classe": "Processo Eleitoral",
+                "frequencia": 65.9
+            }
+        ]
+
+
+def __get_amount_alerted_ujs__(group_id: int) -> int:
+    if group_id == 98:
+        return 2
+    else:
+        return 0
 
 
 
@@ -266,110 +354,41 @@ def graphs(request, vara_id, other_vara_id, is_time):
 @permission_classes((AllowAny,))
 def grupos_list(request):
     try:
-        # filtros opicionais
+        # optional filters
         justica = request.GET.get('justica', None)
         grau = request.GET.get('grau', None)
         classe_processual = request.GET.get('classe_processual', None)
-        fake_data = \
-            [
-                {
-                    "identificador": 20,
-                    "total_varas": 51,
-                    "varas_em_alerta": 2,
-                    "assuntos_frequentes": [
-                        {
-                            "assunto": "Direito Civil",
-                            "frequencia": 22.3
-                        },
-                        {
-                            "assunto": "Direito da Saúde",
-                            "frequencia": 31.3
-                        },
-                        {
-                            "assunto": "Direito Penal",
-                            "frequencia": 17.1
-                        },
 
-                    ],
-                    "classes_frequentes": [
-                        {
-                            "classe": "Processo Cível e do Trabalho",
-                            "frequencia": 35.9
-                        },
-                        {
-                            "classe": "Processo Criminal",
-                            "frequencia": 15.5
-                        },
-                        {
-                            "classe": "Processo Eleitoral",
-                            "frequencia": 10.7
-                        },
-                    ],
-                    "varas": [
-                        {
-                            "nome": "Vara Única de Anajás",
-                            "tempo": 1207,
-                            "latitude": -8.12094,
-                            "longitude": -34.73094
-                        },
-                        {
-                            "nome": "1ª Vara TJBA",
-                            "tempo": 956,
-                            "latitude": -8.12094,
-                            "longitude": -34.93094
-                        },
-                        {
-                            "nome": "1ª Vara TJAC",
-                            "tempo": 843,
-                            "latitude": -9.12094,
-                            "longitude": -35.23094
-                        },
-                    ]
-                },
-                {
-                    "identificador": 21,
-                    "total_varas": 15,
-                    "varas_em_alerta": 0,
-                    "assuntos_frequentes": [
-                        {
-                            "assunto": "Direito Assistencial",
-                            "frequencia": 12.3
-                        },
-                        {
-                            "assunto": "Direito Eleitoral",
-                            "frequencia": 41.3
-                        },
+        # get list of groups and insert selected filters
+        all_groups_obj_list = Group.objects
+        if justica is not None:
+            all_groups_obj_list = all_groups_obj_list.filter(justica=justica)
+        if grau is not None:
+            all_groups_obj_list = all_groups_obj_list.filter(grau=grau)
+        if classe_processual is not None:
+            all_groups_obj_list = all_groups_obj_list.filter(classe_processual=classe_processual)
+        all_groups_obj_list = all_groups_obj_list.order_by('group_id')
 
-                    ],
-                    "classes_frequentes": [
-                        {
-                            "classe": "Processo Eleitoral",
-                            "frequencia": 65.9
-                        }
-                    ],
-                    "varas": [
-                        {
-                            "nome": "Vara Única de Anajás",
-                            "tempo": 654,
-                            "latitude": -8.12094,
-                            "longitude": -34.73094
-                        },
-                        {
-                            "nome": "1ª Vara TJPA",
-                            "tempo": 2300,
-                            "latitude": -8.12094,
-                            "longitude": -34.93094
-                        },
-                        {
-                            "nome": "1ª Vara TJRN",
-                            "tempo": 1980,
-                            "latitude": -9.12094,
-                            "longitude": -35.23094
-                        },
-                    ]
-                }
-            ]
-        return Response(fake_data, HTTP_200_OK)
+        res_list = []
+        for group_obj in all_groups_obj_list.all():
+            # get group info
+            group = GroupListSerializer(group_obj).data
+
+            # add calculated info
+            group.update({'assuntos_frequentes': __get_frequent_subjects__(group['group_id'])})
+            group.update({'classes_frequentes': __get_frequent_classes__(group['group_id'])})
+            group.update({'varas': __get_best_ujs__(group_id=group['group_id'], amount_of_varas=-1)})
+            group.update({'varas_em_alerta': __get_amount_alerted_ujs__(group['group_id'])})
+
+            # rename columns
+            group['identificador'] = group.pop("group_id")
+            group['total_varas'] = group.pop("amount_of_varas")
+            group.pop("frequent_subjects")
+            group.pop("frequent_classes")
+
+            # append response object
+            res_list.append(group)
+        return Response(res_list, HTTP_200_OK)
     except Group.DoesNotExist as e:
         return Response('Error getting grupo. ' + str(e), HTTP_404_NOT_FOUND)
     except Exception as e:

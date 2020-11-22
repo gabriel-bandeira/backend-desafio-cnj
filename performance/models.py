@@ -19,6 +19,7 @@ class Group(models.Model):
     frequent_classes = models.JSONField(null=True)
 
 
+# adicionar tribunal
 class Vara(models.Model):
     vara_id = models.BigIntegerField(primary_key=True)
     name = models.TextField(max_length=255, blank=False, default=None)
