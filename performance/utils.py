@@ -1,6 +1,7 @@
 from .models import Group, Vara, StepConfiguration, Comments, Steps
 from .serializers import GroupSerializer, VaraSerializer, VaraDetailsSerializer, VaraListSerializer,\
     StepConfigurationSerializer, CommentsSerializer, StepsSerializer
+from django.db.models import Avg, StdDev
 
 
 def create_graph_dict(vara_id, is_time=1):
@@ -86,3 +87,27 @@ def find_ranking(res, vara_id):
         count += 1
     
     return None
+
+
+def find_outliers_group(group_id):
+    outliers = []
+    varas_in_group = Vara.objects.filter(group_id=group_id)
+
+    mean = varas_in_group.\
+        aggregate(Avg('days_finish_process'))['days_finish_process__avg']
+    
+    std_dev = varas_in_group.\
+        aggregate(StdDev('days_finish_process'))['days_finish_process__stddev']
+
+    upper_bound = mean + 1.5 * std_dev
+
+    varas_em_alerta = varas_in_group.\
+        filter(days_finish_process__gte = upper_bound)
+
+    for vara in varas_em_alerta:
+        outliers.append({"identificador": vara.vara_id,
+                         "nome": vara.name,
+                         "tempo": vara.days_finish_process})
+
+    return outliers
+
