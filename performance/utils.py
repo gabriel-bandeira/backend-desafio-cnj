@@ -111,3 +111,146 @@ def find_outliers_group(group_id):
 
     return outliers
 
+
+def __get_best_steps__(vara_id: int, amount_of_steps: int = 10):
+    step_objects = Steps.objects.filter(vara_id=vara_id).order_by('med_time')[:amount_of_steps]
+    res_steps = []
+    for step in step_objects.all():
+        step_dict = StepsSerializer(step).data
+
+        my_res_steps = best_varas_on_step_aux(step_dict['step_id'],
+                                              vara_id,
+                                              amount_of_varas=60)
+
+        ranking = find_ranking(my_res_steps, vara_id)
+
+        # print('### res_steps: ', str(res_steps))
+        # print('ranking: ', str(ranking))
+        # print('vara_id: ', str(vara_id))
+
+        res_dict = {
+            'step_id': step_dict['step_id'],
+            'med_time': step_dict['med_time'],
+            'frequency': step_dict['frequency'],
+            'ranking': ranking
+        }
+        # Get step info
+        step_config_obj = StepConfiguration.objects.get(step_id=res_dict['step_id'])
+        step_config = StepConfigurationSerializer(step_config_obj).data
+        res_dict['origin'] = step_config['origin']
+        res_dict['destination'] = step_config['destination']
+        res_steps.append(res_dict)
+    return res_steps
+
+
+def __get_worst_steps__(vara_id: int, amount_of_steps: int = 10):
+    step_objects = Steps.objects.filter(vara_id=vara_id).order_by('-med_time')[:amount_of_steps]
+    res_steps = []
+    for step in step_objects.all():
+        step_dict = StepsSerializer(step).data
+
+        my_res_steps = best_varas_on_step_aux(step_dict['step_id'],
+                                              vara_id,
+                                              amount_of_varas=60)
+
+        ranking = find_ranking(my_res_steps, vara_id)
+
+        res_dict = {
+            'step_id': step_dict['step_id'],
+            'med_time': step_dict['med_time'],
+            'frequency': step_dict['frequency'],
+            'ranking': ranking
+        }
+        # Get step info
+        step_config_obj = StepConfiguration.objects.get(step_id=res_dict['step_id'])
+        step_config = StepConfigurationSerializer(step_config_obj).data
+        res_dict['origin'] = step_config['origin']
+        res_dict['destination'] = step_config['destination']
+        res_steps.append(res_dict)
+    return res_steps
+
+
+def __get_best_ujs__(group_id: int, amount_of_varas: int) -> list:
+    all_uj_obj_list = Vara.objects.filter(group_id=group_id).order_by('days_finish_process')
+    if amount_of_varas > 0:
+        all_uj_obj_list = all_uj_obj_list[:amount_of_varas]
+    all_uj_obj_list = all_uj_obj_list.order_by('days_finish_process')
+
+    res_list = []
+    for uj_obj in all_uj_obj_list.all():
+        uj = VaraSerializer(uj_obj).data
+        res_list.append(uj)
+    return res_list
+
+
+def __get_worst_ujs__(group_id: int, amount_of_varas: int) -> list:
+    all_uj_obj_list = Vara.objects.filter(group_id=group_id).order_by('days_finish_process')
+    if amount_of_varas > 0:
+        all_uj_obj_list = all_uj_obj_list[-amount_of_varas:]
+    all_uj_obj_list = all_uj_obj_list.order_by('days_finish_process')
+
+    res_list = []
+    for uj_obj in all_uj_obj_list.all():
+        uj = VaraSerializer(uj_obj).data
+        res_list.append(uj)
+    return res_list
+
+
+def __get_frequent_subjects__(group_id: int) -> list:
+    if group_id == 98:
+        return [
+            {
+                "assunto": "Direito Civil",
+                "frequencia": 22.3
+            },
+            {
+                "assunto": "Direito da Saúde",
+                "frequencia": 31.3
+            },
+            {
+                "assunto": "Direito Penal",
+                "frequencia": 17.1
+            }
+
+        ]
+    else:
+        return [
+            {
+                "assunto": "Direito Assistencial",
+                "frequencia": 12.3
+            },
+            {
+                "assunto": "Direito Eleitoral",
+                "frequencia": 41.3
+            }
+
+        ]
+
+
+def __get_frequent_classes__(group_id: int) -> list:
+    if group_id == 98:
+        return [
+            {
+                "classe": "Processo Cível e do Trabalho",
+                "frequencia": 35.9
+            },
+            {
+                "classe": "Processo Criminal",
+                "frequencia": 15.5
+            },
+            {
+                "classe": "Processo Eleitoral",
+                "frequencia": 10.7
+            }
+        ]
+    else:
+        return [
+            {
+                "classe": "Processo Eleitoral",
+                "frequencia": 65.9
+            }
+        ]
+
+
+def __get_amount_alerted_ujs__(group_id: int) -> int:
+    return len(find_outliers_group(group_id))
