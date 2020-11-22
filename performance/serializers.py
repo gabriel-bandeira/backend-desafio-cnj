@@ -31,12 +31,13 @@ class VaraDetailsSerializer(serializers.ModelSerializer):
                   'days_finish_process',
                   'group_id']
 
-# adicionar tribunal
 class VaraSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vara
         fields = ['vara_id',
                   'name',
+                  'finished_processes',
+                  'movements',
                   'time_distribuicao',
                   'time_conclusao',
                   'time_despacho',

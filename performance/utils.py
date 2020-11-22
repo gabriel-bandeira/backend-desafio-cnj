@@ -179,6 +179,9 @@ def __get_best_ujs__(group_id: int, amount_of_varas: int) -> list:
     res_list = []
     for uj_obj in all_uj_obj_list.all():
         uj = VaraSerializer(uj_obj).data
+        uj['tribunal'] = uj['name'][-4:]
+        uj['best_steps'] = __get_best_steps__(uj['vara_id'], 1)
+        uj['worst_steps'] = __get_worst_steps__(uj['vara_id'], 1)
         res_list.append(uj)
     return res_list
 

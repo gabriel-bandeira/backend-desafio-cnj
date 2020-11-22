@@ -49,6 +49,7 @@ def vara_details(request, vara_id):
         group_id = vara_res['group_id']
         group = Group.objects.get(group_id=group_id)
         group_res = GroupSerializer(group).data
+        vara_res['tribunal'] = vara_res['name'][-4:]
         vara_res['group'] = group_res
         vara_res.pop('group_id')
         vara_res['best_steps'] = __get_best_steps__(vara_id, 10)
