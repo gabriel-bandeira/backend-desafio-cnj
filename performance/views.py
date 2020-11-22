@@ -4,7 +4,8 @@ from .models import Group, Vara, StepConfiguration, Comments, Steps
 from .serializers import GroupSerializer, GroupListSerializer, VaraSerializer, VaraDetailsSerializer, \
     VaraListSerializer, StepConfigurationSerializer, CommentsSerializer, StepsSerializer, GroupDetailsSerializer
 from .utils import create_graph_dict, best_varas_on_step_aux, find_ranking, __get_best_steps__, __get_worst_steps__,\
-    __get_best_ujs__, __get_worst_ujs__, __get_amount_alerted_ujs__, __get_group_med_time__, find_outliers_group
+    __get_best_ujs__, __get_worst_ujs__, __get_amount_alerted_ujs__, __get_group_med_time__, find_outliers_group,\
+    __get_group_ujs_over_med_time__
 
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, \
@@ -259,6 +260,7 @@ def grupo_details(request, group_id):
 
         # add calculated info
         group.update({'tempo_medio': __get_group_med_time__(group['group_id'])})
+        group.update({'tempoOutrasVaras': __get_group_ujs_over_med_time__(group['group_id'])})
         group.update({'varas': __get_best_ujs__(group_id=group['group_id'], amount_of_varas=-1)})
         group.update({'varasEmAlerta': find_outliers_group(group['group_id'])})
 

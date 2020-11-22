@@ -213,3 +213,14 @@ def __get_group_med_time__(group_id: int) -> int:
     avg_time = uj_objs.aggregate(tempo_medio=Avg('days_finish_process'))
     return avg_time['tempo_medio']
 
+def __get_group_ujs_over_med_time__(group_id: int) -> list:
+    return [{
+        "nome": "Outras Unidades Judiciárias 0",
+        "tempo": 890
+    }, {
+        "nome": "Outras Unidades Judiciárias 1",
+        "tempo": 895
+    }, {
+        "nome": "Outras Unidades Judiciárias 2",
+        "tempo": 900
+    }]
