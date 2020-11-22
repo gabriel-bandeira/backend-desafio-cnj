@@ -81,3 +81,8 @@ class GroupListSerializer(serializers.ModelSerializer):
                   'frequent_subjects',
                   'frequent_classes']
 
+class GroupDetailsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Group
+        fields = ['group_id',
+                  'amount_of_varas']

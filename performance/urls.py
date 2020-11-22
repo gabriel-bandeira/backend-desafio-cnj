@@ -29,5 +29,5 @@ urlpatterns = [
 
     # Grupos
     path('api/v1/grupos/', views.grupos_list),
-    path('api/v1/grupos/<int:grupo_id>/', views.grupo_details),
+    path('api/v1/grupos/<int:group_id>/', views.grupo_details),
 ]

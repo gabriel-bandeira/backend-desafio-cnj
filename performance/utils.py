@@ -104,10 +104,12 @@ def find_outliers_group(group_id):
     varas_em_alerta = varas_in_group.\
         filter(days_finish_process__gte = upper_bound)
 
-    for vara in varas_em_alerta:
-        outliers.append({"identificador": vara.vara_id,
-                         "nome": vara.name,
-                         "tempo": vara.days_finish_process})
+    # for vara in varas_em_alerta:
+    #     outliers.append({"identificador": vara.vara_id,
+    #                      "nome": vara.name,
+    #                      "tempo": vara.days_finish_process})
+
+    outliers = [vara.vara_id for vara in varas_em_alerta]
 
     return outliers
 
@@ -180,8 +182,8 @@ def __get_best_ujs__(group_id: int, amount_of_varas: int) -> list:
     for uj_obj in all_uj_obj_list.all():
         uj = VaraSerializer(uj_obj).data
         uj['tribunal'] = uj['name'][-4:]
-        uj['best_steps'] = __get_best_steps__(uj['vara_id'], 1)
-        uj['worst_steps'] = __get_worst_steps__(uj['vara_id'], 1)
+        # uj['best_steps'] = __get_best_steps__(uj['vara_id'], 1)
+        # uj['worst_steps'] = __get_worst_steps__(uj['vara_id'], 1)
         res_list.append(uj)
     return res_list
 
@@ -195,9 +197,19 @@ def __get_worst_ujs__(group_id: int, amount_of_varas: int) -> list:
     res_list = []
     for uj_obj in all_uj_obj_list.all():
         uj = VaraSerializer(uj_obj).data
+        uj['tribunal'] = uj['name'][-4:]
+        # uj['best_steps'] = __get_best_steps__(uj['vara_id'], 1)
+        # uj['worst_steps'] = __get_worst_steps__(uj['vara_id'], 1)
         res_list.append(uj)
     return res_list
 
 
 def __get_amount_alerted_ujs__(group_id: int) -> int:
     return len(find_outliers_group(group_id))
+
+
+def __get_group_med_time__(group_id: int) -> int:
+    uj_objs = Vara.objects.filter(group_id=group_id).all()
+    avg_time = uj_objs.aggregate(tempo_medio=Avg('days_finish_process'))
+    return avg_time['tempo_medio']
+
