@@ -21,6 +21,9 @@ urlpatterns = [
     # Comentarios
     path('api/v1/comments/', views.comments_list),
     path('api/v1/comments/<int:comment_id>/', views.comment),
+    path('api/v1/comments/create', views.create_comment),
+    path('api/v1/comments/getMyComment/', views.get_my_comment),
+
 
     # Grafos
     path('api/v1/varas/<int:vara_id>/compareGraphWith/'+\

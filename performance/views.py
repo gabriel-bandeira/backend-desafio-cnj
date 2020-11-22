@@ -186,6 +186,45 @@ def comment(request, comment_id):
 
 
 @csrf_exempt
+@api_view(["POST"])
+@permission_classes((AllowAny,))
+def create_comment(request):
+    try:
+        vara_id = request.data.get("vara_id")
+        step_id = request.data.get("step_id")
+        comment = request.data.get("comment")
+
+        step = Steps.objects.get(step_id=step_id, vara_id=vara_id)
+        new_comment = Comments(comment=comment)
+        new_comment.save()
+        step.comment_id = new_comment
+        step.save()
+
+        return Response('success', HTTP_200_OK)
+
+    except Exception as e:
+        return Response(str(e), HTTP_400_BAD_REQUEST)
+
+
+@csrf_exempt
+@api_view(["GET"])
+@permission_classes((AllowAny,))
+def get_my_comment(request):
+    try:
+        step_id = request.GET.get('step_id', None)
+        vara_id = request.GET.get('vara_id', None)
+        step = Steps.objects.get(step_id=step_id, vara_id=vara_id)
+        my_comment = step.comment_id
+        res = CommentsSerializer(my_comment).data
+
+        return Response(res, HTTP_200_OK)
+
+    except Exception as e:
+        return Response(str(e), HTTP_400_BAD_REQUEST)
+
+
+
+@csrf_exempt
 @api_view(["GET"])
 @permission_classes((AllowAny,))
 def graphs(request, vara_id, other_vara_id, is_time):
@@ -547,4 +586,5 @@ def grupo_details(request, group_id):
         return Response('Error getting grupo. ' + str(e), HTTP_404_NOT_FOUND)
     except Exception as e:
         return Response(str(e), HTTP_400_BAD_REQUEST)
+
 

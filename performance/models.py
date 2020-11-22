@@ -58,8 +58,8 @@ class StepConfiguration(models.Model):
 
 
 class Comments(models.Model):
-  comment_id = models.BigIntegerField(primary_key=True)
-  comment = models.TextField(max_length=500, blank=False, default=None)
+  comment_id = models.AutoField(primary_key=True)
+  comment = models.TextField(max_length=1000, blank=False, default=None)
 
 
 class Steps(models.Model):
