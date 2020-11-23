@@ -253,13 +253,13 @@ def grupos_list(request):
 
         # get list of groups and insert selected filters
         all_groups_obj_list = Group.objects
-        if justica is not None:
-            all_groups_obj_list = all_groups_obj_list.filter(justica=justica)
-        if grau is not None:
-            all_groups_obj_list = all_groups_obj_list.filter(grau=grau)
-        if classe_processual is not None:
-            all_groups_obj_list = all_groups_obj_list.filter(classe_processual=classe_processual)
-        all_groups_obj_list = all_groups_obj_list.order_by('group_id')
+        # if justica is not None:
+            # all_groups_obj_list = all_groups_obj_list.filter(justica=justica)
+        # if grau is not None:
+            # all_groups_obj_list = all_groups_obj_list.filter(grau=grau)
+        # if classe_processual is not None:
+            # all_groups_obj_list = all_groups_obj_list.filter(classe_processual=classe_processual)
+        # all_groups_obj_list = all_groups_obj_list.order_by('group_id')
 
         res_list = []
         for group_obj in all_groups_obj_list.all():
