@@ -3,6 +3,22 @@ from .serializers import GroupSerializer, VaraSerializer, VaraDetailsSerializer,
     StepConfigurationSerializer, CommentsSerializer, StepsSerializer
 from django.db.models import Avg, StdDev
 
+import operator
+
+macrosteps_mapping = {
+    "time_distribuicao": "Distribuição",
+    "time_conclusao": "Conclusão",
+    "time_despacho": "Despacho",
+    "time_decisao": "Decisão",
+    "time_julgamento": "Julgamento",
+    "time_transito_em_julgado": "Trânsito em julgado",
+    "time_baixa_ou_arquivamento": "Baixa/Arquivamento",
+    "time_audiencia": "Audiência",
+    "time_citacao": "Citação",
+    "time_outros": "Outros",
+}
+
+
 
 def create_graph_dict(vara_id, is_time=1):
     graph = {'identificador_vara':vara_id,
@@ -172,16 +188,37 @@ def __get_worst_steps__(vara_id: int, amount_of_steps: int = 10):
     return res_steps
 
 
+def __get_best_worst_step_uj(uj_dict):
+    macrosteps = {}
+    for key, value in uj_dict.items():
+        if 'time_' in key.lower():
+            if value > 0:
+                macrosteps[key] = value
+
+    best_step = min(macrosteps.items(), 
+                    key=operator.itemgetter(1))[0]
+    
+    worst_step = max(macrosteps.items(), 
+                    key=operator.itemgetter(1))[0]
+
+    return (macrosteps_mapping[best_step], 
+            macrosteps_mapping[worst_step])
+
+
 def __get_best_ujs__(group_id: int, amount_of_varas: int) -> list:
-    all_uj_obj_list = Vara.objects.filter(group_id=group_id).order_by('days_finish_process')
+    all_uj_obj_list = Vara.objects.filter(group_id=group_id).\
+        order_by('days_finish_process')
     if amount_of_varas > 0:
         all_uj_obj_list = all_uj_obj_list[:amount_of_varas]
     all_uj_obj_list = all_uj_obj_list.order_by('days_finish_process')
 
     res_list = []
-    for uj_obj in all_uj_obj_list.all():
+    for idx, uj_obj in enumerate(all_uj_obj_list.all()):
         uj = VaraSerializer(uj_obj).data
         uj['tribunal'] = uj['name'][-4:]
+        uj['melhorEtapa'], uj['piorEtapa'] = \
+            __get_best_worst_step_uj(uj)
+        uj['ranking'] = idx + 1
         # uj['best_steps'] = __get_best_steps__(uj['vara_id'], 1)
         # uj['worst_steps'] = __get_worst_steps__(uj['vara_id'], 1)
         res_list.append(uj)
