@@ -6,6 +6,7 @@ class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         fields = ['group_id',
+                  'group_name',
                   'competences',
                   'justice',
                   'grade',
@@ -77,6 +78,7 @@ class GroupListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         fields = ['group_id',
+                  'group_name',
                   'amount_of_varas',
                   'frequent_subjects',
                   'frequent_classes']
@@ -85,4 +87,5 @@ class GroupDetailsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         fields = ['group_id',
+                  'group_name',
                   'amount_of_varas']
