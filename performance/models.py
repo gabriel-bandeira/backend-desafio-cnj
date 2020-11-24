@@ -3,13 +3,16 @@ from django.db import models
 
 class Group(models.Model):
     group_id = models.BigIntegerField(primary_key=True)
-
-    competences = models.IntegerField(default=None)
+    group_name = models.TextField(max_length=255, null=True, default=None)
+    competences = models.IntegerField(default=None, null=True)
     justice = models.TextField(max_length=255, blank=False, default=None)
     grade = models.TextField(max_length=255, blank=False, default=None)
     court = models.TextField(max_length=255, null=True, default=None)
     court_class = models.TextField(max_length=255, null=True, default=None)
-    subject = models.TextField(max_length=255, blank=False, default=None)
+    subject = models.TextField(max_length=255, 
+                               blank=False, 
+                               null=True,
+                               default=None)
     judging_body = models.TextField(max_length=255, null=True, default=None)
     method = models.TextField(max_length=255, null=True, default=None)
 
