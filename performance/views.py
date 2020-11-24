@@ -275,6 +275,8 @@ def grupos_list(request):
             group['total_varas'] = group.pop("amount_of_varas")
             group['assuntos_frequentes'] = group.pop("frequent_subjects")
             group['classes_frequentes'] = group.pop("frequent_classes")
+            group['tempo_medio'] = \
+                __get_group_med_time__(group['identificador'])
 
             # append response object
             res_list.append(group)
