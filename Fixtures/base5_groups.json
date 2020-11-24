@@ -1,1 +1,154 @@
-[{"pk": 111, "model": "performance.Group", "fields": {"group_id": 111, "justice": "states", "grade": "G1", "competences": 1116, "subject": "Execu\u00e7\u00e3o Fiscal", "method": "TSNE + DBSCAN", "frequent_subjects": {"DIREITO TRIBUT\u00c1RIO": 86.32, "DIREITO PREVIDENCI\u00c1RIO": 0.19, "DIREITO PENAL": 0.14, "DIREITO DO TRABALHO": 0.05, "DIREITO CIVIL": 3.84, "DIREITO DO CONSUMIDOR": 0.18, "DIREITO PROCESSUAL PENAL": 0.03, "REGISTROS P\u00daBLICOS": 0.07, "DIREITO PROCESSUAL CIVIL E DO TRABALHO": 6.21, "DIREITO DA CRIAN\u00c7A E DO ADOLESCENTE": 0.03, "DIREITO ADMINISTRATIVO E OUTRAS MAT\u00c9RIAS DE DIREITO P\u00daBLICO": 2.93, "DIREITO DA SA\u00daDE": 0.01, "DIREITO ASSISTENCIAL": 0.0}, "frequent_classes": {"PROCESSO C\u00cdVEL E DO TRABALHO": 99.9, "PROCESSO CRIMINAL": 0.1}, "amount_of_varas": 50}}, {"pk": 98, "model": "performance.Group", "fields": {"group_id": 98, "justice": "states", "grade": "G1", "competences": 1116, "subject": "Execu\u00e7\u00e3o Fiscal", "method": "TSNE + DBSCAN", "frequent_subjects": {"DIREITO TRIBUT\u00c1RIO": 75.21, "DIREITO PREVIDENCI\u00c1RIO": 0.21, "DIREITO PENAL": 1.33, "DIREITO CIVIL": 12.7, "DIREITO DO CONSUMIDOR": 0.5, "DIREITO PROCESSUAL PENAL": 0.15, "REGISTROS P\u00daBLICOS": 0.06, "DIREITO PROCESSUAL CIVIL E DO TRABALHO": 4.39, "DIREITO DA CRIAN\u00c7A E DO ADOLESCENTE": 0.36, "DIREITO ADMINISTRATIVO E OUTRAS MAT\u00c9RIAS DE DIREITO P\u00daBLICO": 5.08, "DIREITO ASSISTENCIAL": 0.01}, "frequent_classes": {"PROCESSO C\u00cdVEL E DO TRABALHO": 98.78, "PROCESSO CRIMINAL": 1.14, "EXECU\u00c7\u00c3O PENAL E DE MEDIDAS ALTERNATIVAS": 0.09}, "amount_of_varas": 21}}, {"pk": 256, "model": "performance.Group", "fields": {"group_id": 256, "justice": "states", "grade": "G1", "competences": 1116, "subject": "Execu\u00e7\u00e3o Fiscal", "method": "TSNE + DBSCAN", "frequent_subjects": {"DIREITO TRIBUT\u00c1RIO": 14.31, "DIREITO PREVIDENCI\u00c1RIO": 14.79, "DIREITO PENAL": 18.2, "DIREITO DO TRABALHO": 0.25, "DIREITO CIVIL": 23.98, "DIREITO DO CONSUMIDOR": 1.94, "DIREITO PROCESSUAL PENAL": 2.26, "REGISTROS P\u00daBLICOS": 0.58, "DIREITO PROCESSUAL CIVIL E DO TRABALHO": 16.41, "DIREITO DA CRIAN\u00c7A E DO ADOLESCENTE": 1.03, "DIREITO ADMINISTRATIVO E OUTRAS MAT\u00c9RIAS DE DIREITO P\u00daBLICO": 5.01, "DIREITO PROCESSUAL PENAL MILITAR": 0.01, "DIREITO PENAL MILITAR": 0.01, "DIREITO ELEITORAL": 0.0, "DIREITO DA SA\u00daDE": 0.05, "DIREITO ASSISTENCIAL": 1.17}, "frequent_classes": {"PROCESSO C\u00cdVEL E DO TRABALHO": 77.76, "PROCESSO CRIMINAL": 20.66, "EXECU\u00c7\u00c3O PENAL E DE MEDIDAS ALTERNATIVAS": 1.58}, "amount_of_varas": 42}}]
+[
+  {
+    "pk": 0,
+    "model": "performance.Group",
+    "fields": {
+      "group_id": 0,
+      "group_name": "GRUPO TRIBUTARIO 1",
+      "justice": "states",
+      "grade": "G1",
+      "competences": null,
+      "subject": null,
+      "method": "DBSCAN",
+      "frequent_subjects": {
+        "DIREITO TRIBUTÁRIO": 92.21,
+        "DIREITO PREVIDENCIÁRIO": 0.17,
+        "DIREITO PENAL": 0.33,
+        "DIREITO DO TRABALHO": 0.0,
+        "DIREITO CIVIL": 2.71,
+        "DIREITO DO CONSUMIDOR": 0.08,
+        "DIREITO PROCESSUAL PENAL": 0.0,
+        "REGISTROS PÚBLICOS": 0.04,
+        "DIREITO PROCESSUAL CIVIL E DO TRABALHO": 2.22,
+        "DIREITO DA CRIANÇA E DO ADOLESCENTE": 0.0,
+        "DIREITO ADMINISTRATIVO E OUTRAS MATÉRIAS DE DIREITO PÚBLICO": 2.16,
+        "QUESTÕES DE ALTA COMPLEXIDADE, GRANDE IMPACTO E REPERCUSSÃO": 0.07,
+        "DIREITO ASSISTENCIAL": 0.01
+      },
+      "frequent_classes": {
+        "PROCESSO CÍVEL E DO TRABALHO": 99.7,
+        "PROCESSO CRIMINAL": 0.3
+      },
+      "amount_of_varas": 36
+    }
+  },
+  {
+    "pk": 1,
+    "model": "performance.Group",
+    "fields": {
+      "group_id": 1,
+      "group_name": "GRUPO CIVIL 1",
+      "justice": "states",
+      "grade": "G1",
+      "competences": null,
+      "subject": null,
+      "method": "DBSCAN",
+      "frequent_subjects": {
+        "DIREITO TRIBUTÁRIO": 0.04,
+        "DIREITO CIVIL": 96.13,
+        "DIREITO DO CONSUMIDOR": 0.42,
+        "DIREITO INTERNACIONAL": 0.05,
+        "REGISTROS PÚBLICOS": 0.32,
+        "DIREITO PROCESSUAL CIVIL E DO TRABALHO": 2.72,
+        "DIREITO DA CRIANÇA E DO ADOLESCENTE": 0.06,
+        "DIREITO ADMINISTRATIVO E OUTRAS MATÉRIAS DE DIREITO PÚBLICO": 0.25
+      },
+      "frequent_classes": {
+        "PROCESSO CÍVEL E DO TRABALHO": 99.95,
+        "EXECUÇÃO PENAL E DE MEDIDAS ALTERNATIVAS": 0.05
+      },
+      "amount_of_varas": 11
+    }
+  },
+  {
+    "pk": 2,
+    "model": "performance.Group",
+    "fields": {
+      "group_id": 2,
+      "group_name": "GRUPO CIVIL E DO TRABALHO 1",
+      "justice": "states",
+      "grade": "G1",
+      "competences": null,
+      "subject": null,
+      "method": "DBSCAN",
+      "frequent_subjects": {
+        "DIREITO TRIBUTÁRIO": 0.66,
+        "DIREITO PREVIDENCIÁRIO": 0.37,
+        "DIREITO PENAL": 0.08,
+        "DIREITO DO TRABALHO": 0.34,
+        "DIREITO CIVIL": 50.39,
+        "DIREITO DO CONSUMIDOR": 7.84,
+        "DIREITO PROCESSUAL PENAL": 0.19,
+        "REGISTROS PÚBLICOS": 0.02,
+        "DIREITO PROCESSUAL CIVIL E DO TRABALHO": 37.4,
+        "DIREITO DA CRIANÇA E DO ADOLESCENTE": 0.11,
+        "DIREITO ADMINISTRATIVO E OUTRAS MATÉRIAS DE DIREITO PÚBLICO": 2.13,
+        "DIREITO ELEITORAL": 0.48
+      },
+      "frequent_classes": {
+        "PROCESSO CÍVEL E DO TRABALHO": 99.9,
+        "EXECUÇÃO PENAL E DE MEDIDAS ALTERNATIVAS": 0.1
+      },
+      "amount_of_varas": 9
+    }
+  },
+  {
+    "pk": 3,
+    "model": "performance.Group",
+    "fields": {
+      "group_id": 3,
+      "group_name": "GRUPO PENAL 1",
+      "justice": "states",
+      "grade": "G1",
+      "competences": null,
+      "subject": null,
+      "method": "DBSCAN",
+      "frequent_subjects": {
+        "DIREITO TRIBUTÁRIO": 0.27,
+        "DIREITO PENAL": 98.4,
+        "DIREITO CIVIL": 0.06,
+        "DIREITO PROCESSUAL PENAL": 0.48,
+        "DIREITO PROCESSUAL CIVIL E DO TRABALHO": 0.32,
+        "DIREITO DA CRIANÇA E DO ADOLESCENTE": 0.25,
+        "DIREITO ADMINISTRATIVO E OUTRAS MATÉRIAS DE DIREITO PÚBLICO": 0.15,
+        "DIREITO PENAL MILITAR": 0.08
+      },
+      "frequent_classes": {
+        "PROCESSO CÍVEL E DO TRABALHO": 0.04,
+        "PROCESSO CRIMINAL": 99.8,
+        "EXECUÇÃO PENAL E DE MEDIDAS ALTERNATIVAS": 0.16
+      },
+      "amount_of_varas": 31
+    }
+  },
+  {
+    "pk": 4,
+    "model": "performance.Group",
+    "fields": {
+      "group_id": 4,
+      "group_name": "GRUPO CIVIL E DO TRABALHO 2",
+      "justice": "states",
+      "grade": "G1",
+      "competences": null,
+      "subject": null,
+      "method": "DBSCAN",
+      "frequent_subjects": {
+        "DIREITO TRIBUTÁRIO": 1.89,
+        "DIREITO PREVIDENCIÁRIO": 0.31,
+        "DIREITO PENAL": 0.01,
+        "DIREITO DO TRABALHO": 0.36,
+        "DIREITO CIVIL": 76.35,
+        "DIREITO DO CONSUMIDOR": 2.83,
+        "DIREITO PROCESSUAL PENAL": 0.09,
+        "REGISTROS PÚBLICOS": 0.19,
+        "DIREITO PROCESSUAL CIVIL E DO TRABALHO": 17.31,
+        "DIREITO ADMINISTRATIVO E OUTRAS MATÉRIAS DE DIREITO PÚBLICO": 0.61,
+        "QUESTÕES DE ALTA COMPLEXIDADE, GRANDE IMPACTO E REPERCUSSÃO": 0.05
+      },
+      "frequent_classes": {
+        "PROCESSO CÍVEL E DO TRABALHO": 100.0
+      },
+      "amount_of_varas": 35
+    }
+  }
+]
