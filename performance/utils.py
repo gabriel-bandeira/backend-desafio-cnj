@@ -115,7 +115,7 @@ def find_outliers_group(group_id):
     std_dev = varas_in_group.\
         aggregate(StdDev('days_finish_process'))['days_finish_process__stddev']
 
-    upper_bound = mean + 1.5 * std_dev
+    upper_bound = mean + 1 * std_dev
 
     varas_em_alerta = varas_in_group.\
         filter(days_finish_process__gte = upper_bound)
