@@ -4,6 +4,7 @@ from .serializers import GroupSerializer, VaraSerializer, VaraDetailsSerializer,
 from django.db.models import Avg, StdDev
 
 import operator
+import math
 
 macrosteps_mapping = {
     "time_distribuicao": "Distribuição",
@@ -84,6 +85,7 @@ def best_varas_on_step_aux(step_id, vara_id, amount_of_varas):
         comment_obj = Comments.objects.get(comment_id=step_dict['comment_id'])
         comment = CommentsSerializer(comment_obj).data
         res_dict['comment'] = comment['comment']
+        res_dict['comment_id'] = comment['comment_id']
         # res_dict['comment'] = "Meu comentário fixo"
         res_steps.append(res_dict)
     
@@ -250,6 +252,7 @@ def __get_group_med_time__(group_id: int) -> int:
     avg_time = uj_objs.aggregate(tempo_medio=Avg('days_finish_process'))
     return avg_time['tempo_medio']
 
+
 def __get_group_ujs_over_med_time__(group_id: int) -> list:
     return [{
         "nome": "Outras Unidades Judiciárias 0",
@@ -261,3 +264,33 @@ def __get_group_ujs_over_med_time__(group_id: int) -> list:
         "nome": "Outras Unidades Judiciárias 2",
         "tempo": 900
     }]
+
+
+def filter_unfrequent_steps(steps, vara_id, is_worst_steps):
+
+    # get number of finished processes
+    vara = Vara.objects.get(vara_id=vara_id)
+    number_proc = vara.finished_processes
+
+    # get number of varas in group
+    group_size = vara.group_id.amount_of_varas
+
+    # print('### filter_unfrequent_steps')
+    # print('steps: ', str(steps))
+    # print('number_proc: ', str(number_proc))
+    # print('group_size: ', str(group_size))
+
+    threshold_freq = math.ceil(0.07*number_proc)
+    threshold_pos = math.ceil(0.2*group_size)
+
+    filt_steps = []
+
+    for s in steps:
+        if s['frequency'] > threshold_freq:
+           if is_worst_steps:
+               if s['ranking'] > threshold_pos:
+                   filt_steps.append(s)
+           else:
+               filt_steps.append(s)
+    
+    return filt_steps

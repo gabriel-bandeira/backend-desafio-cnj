@@ -5,7 +5,7 @@ from .serializers import GroupSerializer, GroupListSerializer, VaraSerializer, V
     VaraListSerializer, CommentsSerializer, GroupDetailsSerializer
 from .utils import create_graph_dict, best_varas_on_step_aux, __get_best_steps__, __get_worst_steps__,\
     __get_best_ujs__, __get_amount_alerted_ujs__, __get_group_med_time__, find_outliers_group,\
-    __get_group_ujs_over_med_time__
+    __get_group_ujs_over_med_time__, filter_unfrequent_steps
 
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, \
@@ -76,6 +76,9 @@ def best_varas_on_step(request):
 
         res_steps = best_varas_on_step_aux(step_id, vara_id, amount_of_varas)
         
+        print('#### res_steps is')
+        print(res_steps)
+
         return Response(res_steps, HTTP_200_OK)
     except Steps.DoesNotExist as e:
         return Response('Error getting steps. ' + str(e), HTTP_404_NOT_FOUND)
@@ -96,6 +99,12 @@ def best_steps(request):
         vara_id = request.GET.get('vara_id', None)
         amount_of_steps = int(request.GET.get('amount_of_steps', 10))
         res_steps = __get_best_steps__(vara_id, amount_of_steps)
+
+        # print("### best_steps")
+        # print(res_steps)
+
+        res_steps = filter_unfrequent_steps(res_steps, vara_id, False)
+
         return Response(res_steps, HTTP_200_OK)
     except Steps.DoesNotExist as e:
         return Response('Error getting steps. ' + str(e), HTTP_404_NOT_FOUND)
@@ -112,6 +121,9 @@ def worst_steps(request):
         vara_id = request.GET.get('vara_id', None)
         amount_of_steps = int(request.GET.get('amount_of_steps', 10))
         res_steps = __get_worst_steps__(vara_id, amount_of_steps)
+
+        res_steps = filter_unfrequent_steps(res_steps, vara_id, True)
+
         return Response(res_steps, HTTP_200_OK)
     except Steps.DoesNotExist as e:
         return Response('Error getting steps. ' + str(e), HTTP_404_NOT_FOUND)
