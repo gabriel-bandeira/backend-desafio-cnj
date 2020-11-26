@@ -5,7 +5,7 @@ from .serializers import GroupSerializer, GroupListSerializer, VaraSerializer, V
     VaraListSerializer, CommentsSerializer, GroupDetailsSerializer
 from .utils import create_graph_dict, best_varas_on_step_aux, __get_best_steps__, __get_worst_steps__,\
     __get_best_ujs__, __get_amount_alerted_ujs__, __get_group_med_time__, find_outliers_group,\
-    __get_group_ujs_over_med_time__, filter_unfrequent_steps
+    __get_group_ujs_over_med_time__, filter_unfrequent_steps, __get_best_worst_step_uj
 
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, \
@@ -58,6 +58,11 @@ def vara_details(request, vara_id):
         temp2 = __get_worst_steps__(vara_id, 10)
         vara_res['worst_steps'] = \
             filter_unfrequent_steps(temp2, vara_id, True)
+        
+        vara_res['melhorEtapa'], vara_res['piorEtapa'] = \
+            __get_best_worst_step_uj(VaraSerializer(vara).data)
+
+
         return Response(vara_res, HTTP_200_OK)
     except Vara.DoesNotExist as e:
         return Response(str(e), HTTP_404_NOT_FOUND)
