@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': 'panorama',
         'USER': 'panorama',
         'PASSWORD': 'panorama',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432',
         'CONN_MAX_AGE': 0                                                               }
  }
