@@ -1,49 +1,13 @@
-# Favor também consultar o README.md do git: 
+<div align="center"><img img src='/static/logo.png' width="200"></div> 
 
-https://github.com/lfvvercosa/desafio_cnj
+# [Panorama](http://panorama-fase2.herokuapp.com/)
 
-# Python: Getting Started
+Este projeto é o backend da solução [Panorama](http://panorama-fase2.herokuapp.com/) e funciona em conjunto com o front-end, versionado no github [fase2_desafio_cnj](https://github.com/lfvvercosa/fase2_desafio_cnj)
 
-A barebones Django app, which can easily be deployed to Heroku.
+Cada repositório (este e o do front-end) implementa um app no [Heroku](heroku.com). Além desses dois apps, contamos com um database, também no Heroku, onde armazenamos os dados necessários para execução da solução [Panorama](http://panorama-fase2.herokuapp.com/).
 
-This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
+A solução [Panorama](http://panorama-fase2.herokuapp.com/) pode ser acessada por [este link](http://panorama-fase2.herokuapp.com/)
 
-## Running Locally
+Para mais detalhes, visite o [repositório do front-end](https://github.com/lfvvercosa/fase2_desafio_cnj):
 
-Make sure you have Python 3.7 [installed locally](http://install.python-guide.org). To push to Heroku, you'll need to install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli), as well as [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
-
-```sh
-$ git clone https://github.com/heroku/python-getting-started.git
-$ cd python-getting-started
-
-$ python3 -m venv getting-started
-$ pip install -r requirements.txt
-
-$ createdb python_getting_started
-
-$ python manage.py migrate
-$ python manage.py collectstatic
-
-$ heroku local
-```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku main
-
-$ heroku run python manage.py migrate
-$ heroku open
-```
-or
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Python on Heroku, see these Dev Center articles:
-
-- [Python on Heroku](https://devcenter.heroku.com/categories/python)
+https://github.com/lfvvercosa/fase2_desafio_cnj
