@@ -52,8 +52,12 @@ def vara_details(request, vara_id):
         vara_res['tribunal'] = vara_res['name'][-4:]
         vara_res['group'] = group_res
         vara_res.pop('group_id')
-        vara_res['best_steps'] = __get_best_steps__(vara_id, 10)
-        vara_res['worst_steps'] = __get_worst_steps__(vara_id, 10)
+        temp = __get_best_steps__(vara_id, 10)
+        vara_res['best_steps'] = \
+            filter_unfrequent_steps(temp, vara_id, False)
+        temp2 = __get_worst_steps__(vara_id, 10)
+        vara_res['worst_steps'] = \
+            filter_unfrequent_steps(temp2, vara_id, True)
         return Response(vara_res, HTTP_200_OK)
     except Vara.DoesNotExist as e:
         return Response(str(e), HTTP_404_NOT_FOUND)
