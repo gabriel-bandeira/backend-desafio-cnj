@@ -18,6 +18,6 @@ A aplicação pode rodar dentro de uma imagem docker, para isso é só rodar o c
 
 Durante o docker compose o banco de dados criado também é preenchido com os dados para utilizar na aplicação.
 
-Para iniciar o backend e o banco de dados, execute:
+Para iniciar o backend e o banco de dados, execute na raiz do projeto o seguinte comando:
 
 > $ docker-compose up
