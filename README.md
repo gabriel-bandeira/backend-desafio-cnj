@@ -11,3 +11,13 @@ A solução [Panorama](http://panorama-fase2.herokuapp.com/) pode ser acessada p
 Para mais detalhes, visite o [repositório do front-end](https://github.com/lfvvercosa/fase2_desafio_cnj):
 
 https://github.com/lfvvercosa/fase2_desafio_cnj
+
+# Rodando a aplicação localmente
+
+A aplicação pode rodar dentro de uma imagem docker, para isso é só rodar o comando do docker compose que já serão iniciados dois containers, um com a aplicação e outro com o banco de dados.
+
+Durante o docker compose o banco de dados criado também é preenchido com os dados para utilizar na aplicação.
+
+Para iniciar o backend e o banco de dados, execute:
+
+> $ docker-compose up
